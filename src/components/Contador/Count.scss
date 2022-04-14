@@ -1,0 +1,60 @@
+@mixin phone {
+  @media only screen and (max-width: 649px) {
+    @content;
+  }
+}
+.contador {
+  h5{font-weight:bold;
+     font-size:1.6rem;}
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: auto;
+  max-width: 1080px;
+  height: auto;
+  background-color: #004AAD;
+  padding: 1rem;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  height: auto;
+  min-height: 180px;
+  color: white;
+  border-radius:1rem;
+ 
+  .titulob{
+    color: white;
+  }
+  .contadores{
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+    @include phone{
+      flex-flow: column;
+    }
+  }
+  img{
+    max-width: 50px;
+  }
+  .Count {
+   
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    @include phone{
+      flex-flow: tablet;
+      margin-top: 1rem;
+    }
+   .numero {
+     color:#2bd600;
+     letter-spacing: 1.5px;
+    font-weight: bold;
+      font-size: 2rem;
+      
+    }
+  }
+}

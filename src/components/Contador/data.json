@@ -1,0 +1,32 @@
+{
+  "counts": [
+    {
+      "id": "001",
+      "label": "Watts generados",
+      "number": "1367590",
+      "duration": "6",
+      "image": "https://ecoglobe.mx/assets/sun-energy.png"
+    },
+    {
+      "id": "002",
+      "label": "Árboles salvados",
+      "number": "5321",
+      "duration": "5",
+      "image": "https://ecoglobe.mx/assets/forest.png"
+    },
+    {
+      "id": "003",
+      "label": "Sistemas instalados",
+      "number": "280",
+      "duration": "2",
+      "image": "https://ecoglobe.mx/assets/green-energy.png"
+    },
+    {
+      "id": "004",
+      "label": "Años de experiencia",
+      "number": "13",
+      "duration": "1",
+      "image": "https://ecoglobe.mx/assets/power-station.png"
+    }
+  ]
+}

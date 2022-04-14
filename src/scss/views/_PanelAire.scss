@@ -1,0 +1,82 @@
+.PanelAire {
+  margin-top: 2rem;
+  display: flex;
+
+  strong {
+    color: $app-1 !important;
+  }
+
+  @include phone {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .Contenedor-FormularioPanelAire {
+    display: flex;
+    width: 100%;
+    margin-top: 80px;
+
+    .FormularioPanelAire,
+    .col {
+      flex: 1;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .detalles {
+      padding: 1rem;
+
+      ul {
+        list-style: none;
+
+        li:before {
+          color: $app-2;
+          content: "\f00c";
+          /* FontAwesome Unicode */
+          font-family: FontAwesome;
+          display: inline-block;
+          margin-left: -1.3em;
+          /* same as padding-left set on li */
+          width: 1.3em;
+          /* same as padding-left set on li */
+        }
+      }
+    }
+  }
+}
+
+.centro {
+  font-weight: bolder;
+  padding: 1rem;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cabecera-Panel {
+  col {
+    padding: 1rem;
+  }
+
+  display: flex;
+  flex-flow: row;
+  height: 40vh;
+  width: 100%;
+  max-width: 1080px;
+  margin: auto;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  background-color: $app-1;
+  color: white;
+  text-align: center;
+  background-image: url("../../img/fondo_baner.png");
+  background-position: center;
+  box-shadow: inset 1em 8em 12rem $app-1;
+
+  img {
+    margin: auto;
+    max-width: 240px;
+  }
+}

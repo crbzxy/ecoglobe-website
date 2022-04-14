@@ -1,0 +1,64 @@
+.Contacto {
+  margin-top: 2rem;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  .contenedor-form {
+    display: flex;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    .col {padding-right: 1rem;
+      flex: 1;
+      .titulo {
+        margin-top: 1rem !important;
+      }
+      ul {
+        padding: 1rem;
+        li {
+          display: flex;
+          flex-flow: column;
+          align-items: flex-start;
+          justify-content: center;
+          font-weight: bolder;
+          color: $app-1;
+          p {
+            text-transform: uppercase;
+          }
+          i {
+            color: $app-2;
+            padding: 0.5rem;
+            font-size: 2rem;
+          }
+          a {
+            font-weight: normal;
+            text-decoration: none;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .col form {
+      flex: 1;
+    }
+    @include phone {
+      flex-flow: column;
+    }
+  }
+
+  iframe {
+    margin-top: 1rem;
+    border: none !important;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+}
+.contendedor .Contacto {
+  display: none;
+}

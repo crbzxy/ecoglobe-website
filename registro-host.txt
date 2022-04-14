@@ -1,0 +1,29 @@
+
+Tus registros de DNS reenvían este dominio automáticamente a Facebook. No puedes cambiar estos registros a menos que elimines primero la plantilla.
+
+Tipo	Nombre	Valor	TTL	Acciones
+A	@	184.168.131.241	600 segundos	
+A	*	WSB Published Site	600 segundos	Modificar
+A	chat	184.168.131.241	600 segundos	
+CNAME	email	email.secureserver.net	1 hora	Modificar
+CNAME	ftp	@	1 hora	Modificar
+CNAME	www	@	1 hora	Modificar
+CNAME	_domainconnect	_domainconnect.gd.domaincontrol.com	1 hora	Modificar
+MX	@	aspmx.l.google.com (Prioridad: 1)	1 hora	Modificar
+MX	@	alt3.aspmx.l.google.com (Prioridad: 10)	1 hora	Modificar
+MX	@	alt4.aspmx.l.google.com (Prioridad: 10)	1 hora	Modificar
+MX	@	alt1.aspmx.l.google.com (Prioridad: 5)	1 hora	Modificar
+MX	@	alt2.aspmx.l.google.com (Prioridad: 5)	1 hora	Modificar
+NS	@	ns41.domaincontrol.com	1 hora	
+NS	@	ns42.domaincontrol.com	1 hora	
+SOA	@	Nombre del servidor principal: ns41.domaincontrol.com.	600 segundos	
+SRV	_autodiscover._tcp.@	0 0 443 autodiscover.secureserver.net	1 hora	Modificar
+TXT	@	google-site-verification=xEfgzoC05gARlXp-ki4t0sp6vulh_h--yHz88ndvC-U	1 hora	Modificar
+TXT	@	v=spf1 include:dc-aa8e722993._spfm.ecoglobe.mx ~all	1 hora	Modificar
+TXT	dc-aa8e722993._spfm	v=spf1 include:_spf.google.com ~all	1 hora	Modificar
+TXT	_activator_template	template applied	1 hora
+
+Servidor de nombres
+ns41.domaincontrol.com
+ns42.domaincontrol.com
+

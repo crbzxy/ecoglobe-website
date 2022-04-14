@@ -1,0 +1,143 @@
+@import "../libs/mixins";
+
+.Slider {
+  margin-top: 1.2rem;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  @include phone {
+    
+    width: 100vw;
+  }
+}
+.oculto{
+  display: none;
+}
+.slide {
+
+  opacity: 0;
+  transition-duration: 0.3s ease-in-out;
+  filter: contrast(175%) brightness(3%);
+}
+.active {
+  min-width: 100%;
+
+  opacity: 1;
+  transition-duration: 0.6s;
+  transform: scale(1.01);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: none;
+
+  @include phone {
+    justify-content: flex-start;
+  }
+  .contenedor-slider{
+    width: 100%;
+  }
+}
+.image {
+  min-width: 100%;
+min-height: 400px;
+  height: 100%;
+  background-size: cover;
+  border-radius: 12px;
+
+  @include tablet {
+    min-height: 35vh;
+    border-radius: 0px;
+  }
+}
+
+.contenedor-slider {
+  height: 100%;
+ 
+  left: 3;
+  max-width: 966px;
+  box-sizing: border-box;
+ 
+
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  position: absolute;
+
+  .col {
+    padding-left: 1rem;
+    width: 100%;
+    flex: 1;
+    @include tablet {
+      align-items: flex-start;
+      max-width: 80vw;
+    }
+    @include phone {
+      width: auto;
+    }
+  }
+
+  .titulo-hero {
+    text-transform: uppercase;
+    color: $app-2 !important;
+    max-width: 450px;
+    font-weight: 600;
+    @include tablet {
+      max-width: 380px;
+      left: 0;
+    }
+  }
+  .descripcion-hero {
+    font-size: 0.89rem;
+    max-width: 450px;
+    color: #fff;
+    @include phone {
+      display: none !important;
+    }
+  }
+  .btn-hero {
+    margin-top: 1rem;
+    text-decoration: none;
+    padding: 0.3rem 0.9rem;
+    color: $app-1 !important;
+
+    background-color: $app-2;
+
+    border-radius: 6px;
+    letter-spacing: 0.3px;
+    font-weight: 600;
+    &:hover {
+      transition: all 0.2s ease-in-out;
+      color: $app-1 !important;
+      background-color: $app-2;
+    }
+  }
+}
+
+.btn-slider {
+  font-size: 1.8rem;
+  color: rgba(255, 238, 238, 0.247);
+  background-color: rgba(39, 39, 39, 0.13);
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+  position: absolute;
+  
+  &:hover {
+    color: #fff;
+  }
+}
+.left-arrow {
+  left: 1rem;
+  @include phone {
+    left: 0.2rem;
+  }
+}
+.right-arrow {
+  right: 1rem;
+  @include phone {
+    right: 0.2rem;
+  }
+}
