@@ -1,8 +1,13 @@
 ---
 deployment:
+# define variables to use during the build
+  variables: 
+    projectFolder: 'repositories/ecoglobe-website'
+    : 'repositories/ecoglobe-website/build'
+# define variables to use during the build
   tasks:
     - export DEPLOYPATH=/home/user/public_html/
-    - script: 
+    - script: |
       npm install
       npm run build
     - /bin/cp -R build/* $DEPLOYPATH
