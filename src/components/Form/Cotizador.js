@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
+import FileUpload from './FileUpload';
 
 function Cotizador() {
 
@@ -9,7 +10,7 @@ function Cotizador() {
   const [name, setName] = useState("");
 
 
-  const [file, setFile] = useState(null)
+
 
   const onImageSubmit = (e) => {
 
@@ -18,7 +19,7 @@ function Cotizador() {
 
     const formData = new FormData()
     formData.append('name', name)
-    formData.append('image', file)
+
 
 
 
@@ -44,10 +45,6 @@ function Cotizador() {
     })
   }
 
-  const onInputChange = (e) => {
-    setFile(e.target.files[0])
-
-  }
 
 
   return (
@@ -72,7 +69,7 @@ function Cotizador() {
 
           <div className="form-group m-2">
             <label>Sube una foto de tu recibo</label>
-            <input type="file" name="image" id="fileUpload" onChange={onInputChange} />
+            <FileUpload />
 
           </div>
 

@@ -14,8 +14,8 @@ function PanelesSolares() {
             pagarle la tarifa más alta a CFE
           </p>
         </div>
-        <div className="contenedor ">
-          <div className="row mt-5">
+        <div className="contenedor container ">
+          <div className="row mt-5 p-4 ">
             <div className="col">
               {" "}
               <LazyLoadImage
@@ -83,7 +83,7 @@ function PanelesSolares() {
               <LazyLoadImage effect="blur" className="img-responsive" src={Nosotros2} alt="" />
             </div>
           </div>
-          <div className="row mt-5">
+          <div className="row mt-5 d-flex">
             <div className="col">
               <Cotizador />
             </div>

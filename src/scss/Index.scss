@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
 }
 
 html {
@@ -720,4 +721,10 @@ hr {
 
 .img-responsive {
   max-width: 530px;
+  @include tablet {
+    max-width: 720px;
+  }
+  @include phone {
+    max-width: 320px;
+  }
 }
