@@ -3,6 +3,6 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/user/public_html/
     - script: 
-      pushd npm install
-      pushd npm run build
+      npm install
+      npm run build
     - /bin/cp -R build/* $DEPLOYPATH
