@@ -1,5 +1,6 @@
 import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import Cotizador from "../components/Form/Cotizador";
 import Nosotros2 from "../img/nosotros-home2.png";
 import Sistema from "../img/sistema.png";
 function PanelesSolares() {
@@ -13,13 +14,13 @@ function PanelesSolares() {
             pagarle la tarifa más alta a CFE
           </p>
         </div>
-        <div className="contenedor">
+        <div className="contenedor ">
           <div className="row mt-5">
             <div className="col">
               {" "}
               <LazyLoadImage
                 effect="blur"
-                className="img-fluid"
+                className="img-responsive"
                 src={Sistema}
                 alt="img"
               />
@@ -49,7 +50,7 @@ function PanelesSolares() {
             </div>
           </div>
           <div className="row mt-5">
-            <div className="col">
+            <div className="col ">
               {" "}
               <p className="titulo mt-5">¿Cómo obtener tus paneles solares?</p>
               <ol className="mt-2">
@@ -78,30 +79,33 @@ function PanelesSolares() {
                 <li>Se programa visita para instalación</li>
               </ol>
             </div>
-            <div className="col">
-              <LazyLoadImage effect="blur" className="img-fluid" src={Nosotros2} alt="" />
+            <div className="col ">
+              <LazyLoadImage effect="blur" className="img-responsive" src={Nosotros2} alt="" />
             </div>
           </div>
           <div className="row mt-5">
-            <p className="titulo">¿Que incluye?</p>
-            <ul>
-              <li>
-                Sistema calculado a medida a tus consumos de energía para cubrir
-                tus necesidades
-              </li>
-              <li>Servicio de ingeniería.</li>
-              <li>
-                Servicio técnico, instalación y mantenimiento profesional.
-              </li>
-              <li>Garantía de calidad en materiales y marcas utilizadas.</li>
-              <li>
-                Servicio de monitoreo durante la vida del sistema, para detectar
-                posibles fallas.
-              </li>
-              <li>Póliza de mantenimientos gratis el primer año.</li>
-            </ul>
+            <div className="col">
+              <Cotizador />
+            </div>
+            <div className="col"><p className="titulo">¿Que incluye?</p>
+              <ul>
+                <li>
+                  Sistema calculado a medida a tus consumos de energía para cubrir
+                  tus necesidades
+                </li>
+                <li>Servicio de ingeniería.</li>
+                <li>
+                  Servicio técnico, instalación y mantenimiento profesional.
+                </li>
+                <li>Garantía de calidad en materiales y marcas utilizadas.</li>
+                <li>
+                  Servicio de monitoreo durante la vida del sistema, para detectar
+                  posibles fallas.
+                </li>
+                <li>Póliza de mantenimientos gratis el primer año.</li>
+              </ul>
 
-            <p>Paneles solares Residencial / Comercial / Industrial</p>
+              <p>Paneles solares Residencial / Comercial / Industrial</p></div>
           </div>
         </div>
       </section>
