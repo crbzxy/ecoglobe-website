@@ -1,10 +1,8 @@
 ---
 deployment:
-  - script: npm install --only=dev
-  - script: npm run build
-    - task: Npm@1
-  inputs:
-      - export DEPLOYPATH=/home/user/public_html/
-      - command: 'install'
-      - command: 'build'
-      - /bin/cp -R build/* $DEPLOYPATH
+  tasks:
+    - export DEPLOYPATH=/home/user/public_html/
+    - script: 
+      pushd npm install
+      pushd npm run build
+    - /bin/cp -R build/* $DEPLOYPATH
