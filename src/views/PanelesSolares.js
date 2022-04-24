@@ -1,6 +1,6 @@
 import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import Cotizador from "../components/Form/Cotizador";
+//import Cotizador from "../components/Form/Cotizador";
 import Nosotros2 from "../img/nosotros-home2.png";
 import Sistema from "../img/sistema.png";
 function PanelesSolares() {
@@ -84,9 +84,7 @@ function PanelesSolares() {
             </div>
           </div>
           <div className="row mt-5 d-flex">
-            <div className="col">
-              <Cotizador />
-            </div>
+
             <div className="col"><p className="titulo">¿Que incluye?</p>
               <ul>
                 <li>
