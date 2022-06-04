@@ -8,7 +8,7 @@ function PanelesSolares() {
     <>
       <section className="paneles-solares">
         <div className="cabecera">
-          <h2>Paneles solares</h2>
+          <h2>PANELES SOLARES INTERCONECTADOS A LA RED DE CFE</h2>
           <p>
             Genera energía para tu propiedad con paneles solares y deja de
             pagarle la tarifa más alta a CFE

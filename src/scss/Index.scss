@@ -542,7 +542,7 @@ hr {
 
       img {
         width: 100%;
-        max-width: 380px;
+        max-width: 580px;
         border-radius: 2rem;
         padding: 0.5rem;
       }
@@ -594,16 +594,24 @@ hr {
     }
     .certificaciones-contenedor {
       width: 100%;
-      text-align: center;
+
       .certificacion {
         list-style: none;
-        display: flex;
-        flex-flow: column;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         li {
+          svg {
+            height: 20px;
+            width: 20px;
+            fill: #2bd601;
+            margin-bottom: 0.5rem;
+          }
+          text-align: left !important;
           padding: 1rem;
           background-color: #f3f3f3;
           border-radius: 2rem;
-          margin-bottom: 1rem;
+          margin: 1rem;
+          font-size: calc((1 - 1) * 1.2vw + 0.8rem);
         }
       }
     }
@@ -615,25 +623,19 @@ hr {
   padding: 1rem;
   width: 100%;
   .contenedor-marcas {
-    padding-bottom: 3rem;
-    margin: auto;
-    max-width: 1080px;
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
     list-style: none;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     @include phone {
       align-items: center;
       justify-content: center;
     }
     li img {
       margin: auto;
-      max-width: 120px;
-      max-height: 90px;
+      max-width: 220px;
+      max-height: 120px;
       height: auto;
-      padding: 0.5rem;
+      padding: 1rem;
     }
   }
 }
@@ -670,15 +672,17 @@ hr {
 .carousel-caption {
   h1,
   h2 {
+    position: relative;
+
     width: 33vw;
     max-width: 420px;
-    font-size: 1.6rem;
+
     color: #2bd601;
     font-weight: bolder;
     text-transform: uppercase;
   }
   position: absolute;
-  bottom: 35%;
+  bottom: 29%;
   left: 5%;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
@@ -693,9 +697,8 @@ hr {
     right: auto !important;
     h1,
     h2 {
-      width: 100%;
-      max-width: 100%;
-      font-size: 1.3rem;
+      width: 90%;
+      max-width: 90%;
     }
   }
 }

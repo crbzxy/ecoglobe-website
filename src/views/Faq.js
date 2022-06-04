@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
-import Invierte from "../img/invierte.jpeg"
+import Invierte from "../img/camioneta.jpeg"
+import { LazyLoadImage } from "react-lazy-load-image-component";
 function Faq() {
 
   useEffect(() => {
@@ -26,7 +27,7 @@ function Faq() {
 
       <div className="contenedor-preguntas">
         <div className="img-preguntas">
-          <img src={Invierte} alt="Eco Globe, tu mejor solución en paneles solares" />
+          <LazyLoadImage effect="blur" src={Invierte} alt="Eco Globe, tu mejor solución en paneles solares" />
         </div>
         <div className="preguntas">
           <details>

@@ -78,7 +78,7 @@ function Navbar() {
           {" "}
           <i className="fas fa-phone-square-alt"></i> (664) 382-4379
         </a>
-        <ExternalLink href="https://www.facebook.com/ecoglobeenergialimpia">
+        <ExternalLink href="https://www.facebook.com/ecoglobe.mx">
           <li>
             <FaIcons.FaFacebook />
           </li>

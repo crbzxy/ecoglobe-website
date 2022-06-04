@@ -16,7 +16,7 @@ function Carrousel() {
             alt="Second slide"
           />
           <img
-            className="d-block  h-75 w-100 slider-r"
+            className="d-block  h-50 w-100 slider-r"
             src="https://firebasestorage.googleapis.com/v0/b/ecoglobe-bucket.appspot.com/o/hero%E2%80%93r.png?alt=media&token=2ff752ef-44bf-4f16-bf0c-1f8330cfba4f"
             alt="First slide responsive"
           />
@@ -32,7 +32,7 @@ function Carrousel() {
             alt="Second slide"
           />
           <img
-            className="d-block  h-75 w-100 slider-r"
+            className="d-block  h-50 w-100 slider-r"
             src="https://firebasestorage.googleapis.com/v0/b/ecoglobe-bucket.appspot.com/o/hero%E2%80%93r2.png?alt=media&token=dc01babf-dca1-49ab-be70-0cdd05c555ed"
             alt="First slide responsive"
           />
@@ -49,7 +49,7 @@ function Carrousel() {
             alt="Second slide"
           />
           <img
-            className="d-block  h-75 w-100 slider-r"
+            className="d-block  h-50 w-100 slider-r"
             src="https://firebasestorage.googleapis.com/v0/b/ecoglobe-bucket.appspot.com/o/hero%E2%80%93r3.png?alt=media&token=f8f42be1-bb22-42d5-b457-7fcada61e7ef"
             alt="First slide responsive"
           />

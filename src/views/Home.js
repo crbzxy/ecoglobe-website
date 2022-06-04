@@ -178,7 +178,7 @@ function Home() {
             <p>
               Aprovecha nuestra promoción de verano, y cámbiate a energía solar.
             </p>
-            <Link className="btn-secundario" to="/panel-mas-aire">
+            <Link className="btn-secundario" to="/contacto">
               ¡Conoce más!
             </Link>
           </div>
