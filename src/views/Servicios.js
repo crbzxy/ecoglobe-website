@@ -54,7 +54,7 @@ function Servicios() {
         <div className='card-servicios'>
           <LazyLoadImage effect='blur' src={Reparacion} alt='img' />
           <div className='contenedor-card'>
-            <p className='titulo'>Proyectos Eléctricos </p>
+            <p className='titulo'>SOLUCIONES EN ELECTRICIDAD </p>
             <p>
               Nos encargamos de diseñar tu proyecto eléctrico personalizado,
               adecuado a tus necesidades y realizamos todo el proceso de

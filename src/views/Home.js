@@ -115,7 +115,7 @@ function Home() {
                 className='imag-card'
               />
               <div className='texto'>
-                <p className='titulo'>Proyectos Eléctricos</p>
+                <p className='titulo'>SOLUCIONES EN ELECTRICIDAD</p>
                 <p className='descripcion'>
                   Nos encargamos de diseñar tu proyecto eléctrico personalizado,
                   adecuado a tus necesidades y realizamos todo el proceso de
@@ -185,7 +185,7 @@ function Home() {
             <p>
               Aprovecha nuestra promoción de verano, y cámbiate a energía solar.
             </p>
-            <Link className='btn-secundario' to='/aire-acondicionado'>
+            <Link className='btn-secundario' to='/aire-acondicionado/#airepanel'>
               ¡Conoce más!
             </Link>
           </div>

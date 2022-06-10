@@ -92,7 +92,9 @@ const Cotiazdor = () => {
             <option value='PANELES SOLARES AUTÓNOMOS'>
               PANELES SOLARES AUTÓNOMOS
             </option>
-            <option value='PROYECTOS ELÉCTRICOS'>PROYECTOS ELÉCTRICOS</option>
+            <option value='SOLUCIONES EN ELECTRICIDAD'>
+              SOLUCIONES EN ELECTRICIDAD
+            </option>
             <option value='AIRE ACONDICIONADO'>AIRE ACONDICIONADO</option>
             <option value='AIRE ACONDICIONADO + PANEL'>
               AIRE ACONDICIONADO + PANEL

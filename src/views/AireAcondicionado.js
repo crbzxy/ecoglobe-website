@@ -29,20 +29,21 @@ function AireAcondicionado() {
               />
             </div>
             <div className='col'>
-            <h2 className='titulo'>¿Que incluye?</h2>
-            <ul>
-              <li>Diseño</li>
-              <li>Servicio técnico</li>
-              <li>Instalación</li>
-              <li>Mantenimiento profesional</li>
-            </ul>
-             
+              <h2 className='titulo'>¿Que incluye?</h2>
+              <ul>
+                <li>Diseño</li>
+                <li>Servicio técnico</li>
+                <li>Instalación</li>
+                <li>Mantenimiento profesional</li>
+              </ul>
             </div>
           </div>
-          
 
-          <div className='row mt-5 d-flex'>
-            <h2>Paquete de aire acondicionado + paneles solares</h2>
+          <hr />
+          <div className='row mt-5 d-flex' id='airepanel'>
+            <h2 style={{ maxWidth: '740px', textAlign: 'center' }}>
+              Paquete de aire acondicionado + paneles solares
+            </h2>
           </div>
           <div className='row mt-5 p-4 '>
             <div className='col  text-center'>
@@ -56,7 +57,6 @@ function AireAcondicionado() {
               />
             </div>
             <div className='col'>
-            
               <p>
                 Si quieres instalar aires acondicionados pero te preocupa que el
                 pago de la luz se incremente, la combinación perfecta es paneles
@@ -70,7 +70,7 @@ function AireAcondicionado() {
             </div>
           </div>
           <div className='row '>
-          <Cotiazdor />
+            <Cotiazdor />
           </div>
         </div>
       </section>

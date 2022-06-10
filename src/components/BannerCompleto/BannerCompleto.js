@@ -16,7 +16,7 @@ function BannerCompleto() {
             Ponte en contacto y recibe una cotización personalizada
 
           </p>
-          <Link className="btn-primario" to="/contacto">
+          <Link className="btn-primario" to="/servicios">
             ¡Cotiza ahora!
           </Link>
         </div>
