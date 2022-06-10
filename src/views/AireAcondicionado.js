@@ -1,5 +1,6 @@
 import React from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import Cotiazdor from '../components/Form/Cotizador';
 //import Cotizador from "../components/Form/Cotizador";
 //import Nosotros2 from "../img/nosotros-home2.png";
 import Aire from '../img/Aire.png';
@@ -16,8 +17,8 @@ function AireAcondicionado() {
           </p>
         </div>
         <div className='contenedor container '>
-          <div className='row mt-5 p-4 '>
-            <div className='col text-center'>
+          <div className='row mt-5 p-4  d-flex wrap'>
+            <div className='col '>
               {' '}
               <LazyLoadImage
                 effect='blur'
@@ -28,15 +29,17 @@ function AireAcondicionado() {
               />
             </div>
             <div className='col'>
-              <p className='titulo'>¿Que incluye?</p>
-              <ul>
-                <li>Diseño</li>
-                <li>Servicio técnico</li>
-                <li>Instalación</li>
-                <li>Mantenimiento profesional</li>
-              </ul>
+            <h2 className='titulo'>¿Que incluye?</h2>
+            <ul>
+              <li>Diseño</li>
+              <li>Servicio técnico</li>
+              <li>Instalación</li>
+              <li>Mantenimiento profesional</li>
+            </ul>
+             
             </div>
           </div>
+          
 
           <div className='row mt-5 d-flex'>
             <h2>Paquete de aire acondicionado + paneles solares</h2>
@@ -53,7 +56,7 @@ function AireAcondicionado() {
               />
             </div>
             <div className='col'>
-              <p className='titulo'>¿Que incluye?</p>
+            
               <p>
                 Si quieres instalar aires acondicionados pero te preocupa que el
                 pago de la luz se incremente, la combinación perfecta es paneles
@@ -65,6 +68,9 @@ function AireAcondicionado() {
                 sola instalación eléctrica con capacidad para paneles y aires.{' '}
               </p>
             </div>
+          </div>
+          <div className='row '>
+          <Cotiazdor />
           </div>
         </div>
       </section>

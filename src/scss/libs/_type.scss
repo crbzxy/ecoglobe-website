@@ -1,6 +1,6 @@
-@import "./mixins";
-@import "./variables";
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,600;0,700;1,400&display=swap");
+@import './mixins';
+@import './variables';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,600;0,700;1,400&display=swap');
 
 html {
   font-size: calc((1 - 1) * 1.2vw + 1rem);
@@ -16,7 +16,7 @@ h3,
 h4,
 h5 {
   margin: 1rem 0 0.38rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   line-height: 1.1;
 }
@@ -26,7 +26,10 @@ h1 {
 }
 
 h2 {
-  font-size: 2.441rem;
+  font-size: calc((0.8) * 1vw + 1.4rem) !important;
+  max-width: 680px;
+  text-transform: uppercase;
+
   color: $app-2;
 }
 
@@ -51,7 +54,7 @@ small,
 }
 
 @include phone {
-  @import url("https://fonts.googleapis.com/css?family=Poppins:400");
+  @import url('https://fonts.googleapis.com/css?family=Poppins:400');
 
   html {
     font-size: 100%;
@@ -66,7 +69,7 @@ small,
   h4,
   h5 {
     margin: 3rem 0 1.02rem;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     line-height: 1.3;
   }

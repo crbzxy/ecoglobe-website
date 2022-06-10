@@ -83,9 +83,9 @@ function Certificaciones() {
             </li>
           </ul>
           <br />
-          <h2 className="titulo text-center">
+          <h3 className="titulo text-center">
             Cámaras y asociaciones de las que somos parte:<br /><strong style={{ color: "black" }}>CANACINTRA, CPEF, REDEMERE. </strong>
-          </h2>
+          </h3>
 
         </div>
       </div>

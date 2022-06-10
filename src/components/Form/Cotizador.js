@@ -1,104 +1,133 @@
-import axios from 'axios'
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
-import FileUpload from './FileUpload';
+import { useState } from 'react';
+import axios from 'axios';
+//import { Link } from 'react-router-dom';
+import styles from './styles.module.scss';
 
-function Cotizador() {
-
+const Cotiazdor = () => {
   const [sent, setSent] = useState(false);
+  const [data, setData] = useState({
+    name: '',
+    lastname: '',
+    email: '',
+    phone: '',
+    service: '',
+    ecount: '',
+  });
+  const [error, setError] = useState('');
+  const [msg, setMsg] = useState('');
 
-  const [name, setName] = useState("");
+  const handleChange = ({ currentTarget: input }) => {
+    setData({ ...data, [input.name]: input.value });
+  };
 
-
-
-
-  const onImageSubmit = (e) => {
-
-    e.preventDefault()
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     setSent(true);
-
-    const formData = new FormData()
-    formData.append('name', name)
-
-
-
-
-
-    const config = {
-      headers: {
-        'content-type': 'multipart/form-data',
-
+    try {
+      const url = 'https://back.ecoglobe.mx/cotizacion';
+      const { data: res } = await axios.post(url, data);
+      setMsg(res.message);
+    } catch (error) {
+      if (
+        error.response &&
+        error.response.status >= 400 &&
+        error.response.status <= 500
+      ) {
+        setError(error.response.data.message);
       }
-
     }
-    const URI = 'http://localhost:3001/cotizacion/paneles'
-    axios.post(URI, formData, config, name).then(res => {
-
-      alert(" Información recibida, nos comunicaremos con usted en breve,gracias por su preferencia")
-      console.log(res)
-      console.log(res.data)
-
-    }).catch((err) => {
-      console.error(
-        "Error: ", err
-      )
-    })
-  }
-
-
+  };
 
   return (
-    <>
-      {!sent ? (
-        <form onSubmit={onImageSubmit} >
-          <p className='titulo'>Cotiza tu proyecto</p>
+    <div className={styles.Cotiazdor_container}>
+      {!sent && (
+        <form className={styles.form_container} onSubmit={handleSubmit}>
+          <h3 className='titulo'>Cotiza un proyecto</h3>
+          <input
+            type='text'
+            placeholder='Nombre'
+            name='name'
+            onChange={handleChange}
+            value={data.name}
+            required
+            className={styles.input}
+          />
+          <input
+            type='text'
+            placeholder='Apellido'
+            name='lastname'
+            onChange={handleChange}
+            value={data.lastname}
+            required
+            className={styles.input}
+          />
+          <input
+            type='email'
+            placeholder='Email'
+            name='email'
+            onChange={handleChange}
+            value={data.email}
+            required
+            className={styles.input}
+          />
+          <input
+            type='phone'
+            placeholder='teléfono'
+            name='phone'
+            onChange={handleChange}
+            value={data.phone}
+            required
+            className={styles.input}
+          />
+          <select
+            name='service'
+            id='service'
+            onChange={handleChange}
+            value={data.service}
+            required>
+            <option value=''>Selecciona un servicio</option>
+            <option value='PANELES SOLARES INTERCONECTADOS A LA RED DE CFE'>
+              PANELES SOLARES INTERCONECTADOS A LA RED DE CFE
+            </option>
+            <option value='PANELES SOLARES AUTÓNOMOS'>
+              PANELES SOLARES AUTÓNOMOS
+            </option>
+            <option value='PROYECTOS ELÉCTRICOS'>PROYECTOS ELÉCTRICOS</option>
+            <option value='AIRE ACONDICIONADO'>AIRE ACONDICIONADO</option>
+            <option value='AIRE ACONDICIONADO + PANEL'>
+              AIRE ACONDICIONADO + PANEL
+            </option>
+          </select>
 
-          <div className="form-group m-2">
-            <label>Nombre</label>
-            <input type="text" className="form-control" name="nombre"
-              value={name}
-              onChange={(e) => setName(e.target.value)} />
+          <select
+            name='ecount'
+            id='ecount'
+            onChange={handleChange}
+            value={data.ecount}
+            required>
+            <option value=''>¿Cuánto pagas de luz? </option>
+            <option value='$0 - $1,000'>$0 - $1,000</option>
+            <option value='$1,000 - $2,000'>$1,000 - $2,000</option>
+            <option value='$2,000 - $5,000'>$2,000 - $5,000</option>
+            <option value='Más de $5,000'>Más de $5,000</option>
+          </select>
 
-          </div>
-
-          <div className="form-group m-2">
-            <label>Correo</label>
-            <input type="email" className="form-control" name="correo" />
-          </div>
-
-
-          <div className="form-group m-2">
-            <label>Sube una foto de tu recibo</label>
-            <FileUpload />
-
-          </div>
-
-          <div className="form-group m-2">
-            <label>Teléfono</label>
-            <input type="text" className="form-control" name="telefono" />
-          </div>
-
-          <div className="form-grup m-2">
-            <label>Mensaje</label>
-            <textarea className="form-control" name="mensaje" rows="3" ></textarea >
-          </div>
-
-          <button className='btn btn-primario' type="submit">Subir</button>
+          {error && <div className={styles.error_msg}>{error}</div>}
+          {msg && <div className={styles.success_msg}>{msg}</div>}
+          <button type='submit' className='btn-primario'>
+            Cotizar
+          </button>
         </form>
-      ) : (
-        <section>
-          <div className="contenedor">
-            <h2>Gracias por tu mensaje, nos comunicaremos lo más pronto posible</h2>
-            <Link className="btn-primario" to="/">
-              {" "}
-              Regresar al inicio
-            </Link>
-          </div>
-        </section>
       )}
+      {sent && (
+        <div className={styles.success_msg}>
+          <h3 className='titulo'>Cotización enviada</h3>
+          <p>Gracias por tu preferencia, responderemos a la brevedad</p>
+          {msg}
+        </div>
+      )}
+    </div>
+  );
+};
 
-    </>
-  )
-}
-
-export default Cotizador
+export default Cotiazdor;

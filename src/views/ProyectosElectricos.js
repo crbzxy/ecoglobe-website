@@ -1,7 +1,7 @@
 import React from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-//import Cotizador from "../components/Form/Cotizador";
-import Nosotros2 from '../img/nosotros-home2.png';
+import Cotizador from '../components/Form/Cotizador';
+//import Nosotros2 from '../img/nosotros-home2.png';
 import Sistema from '../img/pe.png';
 function ProyectoElectricos() {
   return (
@@ -9,9 +9,10 @@ function ProyectoElectricos() {
       <section className='paneles-solares'>
         <div className='cabecera'>
           <h2>Soluciones en electricidad</h2>
-          <p>
-            Nos encargamos de diseñar tu proyecto eléctrico personalizado desde
-            de la planeación a la ejecucción
+          <p style={{ maxWidth: '700px' }}>
+            Nos encargamos de diseñar tu proyecto eléctrico personalizado,
+            adecuado a tus necesidades y realizamos todo el proceso de
+            instalación e ingeniería.
           </p>
         </div>
         <div className='contenedor container '>
@@ -31,7 +32,7 @@ function ProyectoElectricos() {
               <ul>
                 <li>Proyectos nuevos</li>
                 <li>Remodelaciones</li>
-                <li>Problemas Electricos</li>
+                <li>Problemas Eléctricos </li>
                 <li>Alumbrado público</li>
                 <li>
                   Mantenimiento de:
@@ -64,6 +65,9 @@ function ProyectoElectricos() {
                 </li>
                 <li>Proyección de propuestas y soluciones integrales.</li>
               </ul>
+            </div>
+            <div className='col'>
+              <Cotizador />
             </div>
           </div>
         </div>
