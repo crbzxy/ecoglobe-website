@@ -24,7 +24,8 @@ const Cotiazdor = () => {
     e.preventDefault();
     setSent(true);
     try {
-      const url = 'https://back.ecoglobe.mx/cotizacion';
+      const url =
+        'https://ecoglobe-contact-server-production.up.railway.app/cotizacion';
       const { data: res } = await axios.post(url, data);
       setMsg(res.message);
     } catch (error) {

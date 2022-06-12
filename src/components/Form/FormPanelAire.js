@@ -22,7 +22,7 @@ class FormPanelAire extends Component {
     axios({
       method: 'POST',
       //url: "https://staff.ecoglobe.mx/PanelMasAire",
-      url: 'https://back.ecoglobe.mx/PanelMasAire',
+      url: 'https://ecoglobe-contact-server-production.up.railway.app/PanelMasAire',
       data: this.state,
     }).then((response) => {
       if (response.data.status === 'sent') {

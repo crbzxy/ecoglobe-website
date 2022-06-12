@@ -20,7 +20,7 @@ class ContactForm extends Component {
     this.setState({ status: 'Enviando...' });
     axios({
       method: 'POST',
-      url: 'https://back.ecoglobe.mx/contact',
+      url: 'https://ecoglobe-contact-server-production.up.railway.app/contact',
       data: this.state,
     }).then((response) => {
       if (response.data.status === 'sent') {
