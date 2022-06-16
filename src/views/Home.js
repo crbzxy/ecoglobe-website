@@ -64,7 +64,7 @@ function Home() {
             <div className='col'>
               <Link to='/servicios'>
                 <button className='btn-secundario'>
-                  ¡Solicita tu cotización!
+                  ¡Conoce más!
                 </button>
               </Link>
             </div>
@@ -85,7 +85,8 @@ function Home() {
                   Genera energía para tu propiedad con paneles solares y deja de
                   pagarle la tarifa más alta a CFE
                 </p>
-                <Link to='/contacto'> Cotiza tu proyecto</Link>
+                <br />
+                <Link to='/paneles-solares' className='btn-primario'> Cotiza tu proyecto</Link>
               </div>
             </div>
 
@@ -103,7 +104,8 @@ function Home() {
                   al sistema de luz, generas tu propia energía de una manera
                   autónoma.
                 </p>
-                <Link to='/contacto'> Cotiza tu proyecto</Link>
+                <br />
+                <Link to='/paneles-solares-autonomos' className='btn-primario'> Cotiza tu proyecto</Link>
               </div>
             </div>
 
@@ -121,7 +123,8 @@ function Home() {
                   adecuado a tus necesidades y realizamos todo el proceso de
                   instalación e ingenería.
                 </p>
-                <Link to='/contacto'> Cotiza tu proyecto</Link>
+                <br />
+                <Link to='/soluciones-en-electricidad' className='btn-primario'> Cotiza tu proyecto</Link>
               </div>
             </div>
           </section>
