@@ -1,23 +1,23 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
 }
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;800&display=swap");
-@import "libs/type";
-@import "libs/mixins";
-@import "libs/variables";
-@import "components/navbar";
-@import "components/slides";
-@import "components/footer";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;800&display=swap');
+@import 'libs/type';
+@import 'libs/mixins';
+@import 'libs/variables';
+@import 'components/navbar';
+@import 'components/slides';
+@import 'components/footer';
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   line-height: 1.75;
   color: #000000;
@@ -85,7 +85,7 @@ body {
     justify-content: center;
     color: white;
     &:before {
-      content: "";
+      content: '';
       background-color: $app-1;
       width: 100%;
       height: 340px;
@@ -160,7 +160,7 @@ body {
         }
       }
       .titulo {
-        font-family: "Montserrat", sans-serif;
+        font-family: 'Montserrat', sans-serif;
         font-size: 0.8rem;
         font-weight: bolder;
         @include phone {
@@ -178,7 +178,7 @@ body {
         text-decoration: none;
         color: #00247d;
         ::after {
-          content: "?";
+          content: '?';
         }
       }
     }
@@ -262,7 +262,7 @@ body {
   align-items: center;
   justify-content: center;
   display: flex;
-  background-image: url("../img/fondo_baner.png");
+  background-image: url('../img/fondo_baner.png');
   background-position: center;
   background-size: cover;
   .contenedor-banner {
@@ -424,10 +424,10 @@ body {
 
 //views
 
-@import "views/nosotros";
-@import "views/services";
-@import "views/PanelAire";
-@import "views/contacto";
+@import 'views/nosotros';
+@import 'views/services';
+@import 'views/PanelAire';
+@import 'views/contacto';
 
 .cards-porque {
   margin-top: 2rem;
@@ -459,7 +459,7 @@ body {
   text-transform: uppercase;
 }
 
-@import "components/formulario";
+@import 'components/formulario';
 
 details {
   position: relative;
@@ -472,7 +472,7 @@ details {
     margin-top: 0.5rem !important;
     margin-left: 10px !important;
     &:before {
-      content: "R= ";
+      content: 'R= ';
       color: $app-1;
       font-weight: bolder;
     }
@@ -484,7 +484,7 @@ details {
   }
 }
 
-@import "views/success";
+@import 'views/success';
 
 hr {
   border: none;
@@ -508,7 +508,7 @@ hr {
   background-color: $app-1;
   color: white;
   text-align: center;
-  background-image: url("../img/servicios.png");
+  background-image: url('../img/servicios.png');
   background-position: center;
   box-shadow: inset 1em 8em 12rem $app-1;
 }
@@ -516,7 +516,7 @@ hr {
   min-height: auto !important;
 }
 
-@import "../components/Contador/Count";
+@import '../components/Contador/Count';
 
 .Faq {
   display: flex;
@@ -732,7 +732,13 @@ hr {
   }
 }
 
-.row{
+.row {
+  align-items: center;
+  justify-content: center;
+}
+
+.Error {
+  display: flex;
   align-items: center;
   justify-content: center;
 }

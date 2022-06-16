@@ -5,7 +5,8 @@ function Error() {
   return (
     <div className=" contenedor Error">
 
-      <h1>Pagina no encontrada</h1>
+      <h2>Pagina no encontrada</h2>
+      <p style={{fontSize:"4rem"}}>⛈️</p>
       <Link className="btn-primario" to="/">Volver al inicio</Link>
     </div>
   );
