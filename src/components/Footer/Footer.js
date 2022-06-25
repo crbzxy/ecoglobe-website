@@ -41,11 +41,23 @@ function Footer() {
 
             <li><a href="mailto:info@ecoglobe.mx"> <i className="fas fa-envelope"></i> info@ecoglobe.mx</a></li>
 
-            <ExternalLink href="https://www.facebook.com/ecoglobeenergialimpia">
-              <li>
-                <FaIcons.FaFacebook />
-              </li>
-            </ExternalLink>
+            <div className="redes">
+            <ExternalLink href='https://www.facebook.com/ecoglobe.mx'>
+          <li>
+            <FaIcons.FaFacebook />
+          </li>
+        </ExternalLink>
+        <ExternalLink href='https://www.instagram.com/ecoglobe.mx/'>
+          <li>
+            <FaIcons.FaInstagram />
+          </li>
+        </ExternalLink>
+        <ExternalLink href='https://www.linkedin.com/company/eco-globe-energ%C3%ADa-solar/'>
+          <li>
+            <FaIcons.FaLinkedinIn />
+          </li>
+        </ExternalLink>
+           </div>
           </ul>
         </div>
       </div>
