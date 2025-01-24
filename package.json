@@ -1,3 +1,4 @@
+```json
 {
   "name": "ecoglobe-front",
   "version": "0.1.0",
@@ -5,7 +6,7 @@
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "5.11.9",
-    "@testing-library/react": "11.2.5",
+    "@testing-library/react": "11.2.5", 
     "@testing-library/user-event": "12.8.3",
     "aos": "2.3.4",
     "axios": "0.21.1",
@@ -29,7 +30,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "install": "npm install --legacy-peer-deps"
   },
   "eslintConfig": {
     "extends": [
@@ -37,10 +39,18 @@
       "react-app/jest"
     ]
   },
+  "overrides": {
+    "react-whatsapp-widget": {
+      "react": "17.0.1"
+    }
+  },
+  "resolutions": {
+    "react": "17.0.1"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
-      "not dead",
+      "not dead", 
       "not op_mini all"
     ],
     "development": [
@@ -50,3 +60,4 @@
     ]
   }
 }
+```
