@@ -1,3 +1,2 @@
 // Punto de entrada antiguo usado por Create React App.
-// Vite utiliza `src/main.jsx` como entry principal.
-
+// Vite usa `index.html` → `src/main.jsx` como entry principal.

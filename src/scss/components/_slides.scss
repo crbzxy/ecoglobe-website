@@ -1,5 +1,4 @@
-@use "../libs/mixins" as *;
-@use "../libs/variables" as *;
+@import "../libs/mixins";
 
 .Slider {
   margin-top: 1.2rem;

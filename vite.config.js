@@ -2,15 +2,26 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
 import { resolve } from 'path';
 
-export default defineConfig({
+const productionBase = 'https://www.ecoglobe.mx/';
+
+export default defineConfig(({ command }) => ({
   plugins: [react()],
-  base: 'https://www.ecoglobe.mx/',
+  base: command === 'build' ? productionBase : '/',
+  css: {
+    preprocessorOptions: {
+      scss: {
+        silenceDeprecations: ['import'],
+        quietDeps: true
+      }
+    }
+  },
   build: {
     outDir: 'dist'
   },
   esbuild: {
+    jsx: 'automatic',
     loader: 'jsx',
-    include: /src\/.*\.js$/
+    include: /src\/.*\.[jt]sx?$/
   },
   resolve: {
     alias: {
@@ -23,6 +34,6 @@ export default defineConfig({
       overlay: true
     }
   }
-});
+}));
 
 

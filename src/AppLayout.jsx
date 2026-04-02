@@ -6,11 +6,14 @@ import ScrollToTop from './components/scrollToTop';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import { appRoutes } from './routes';
+import { getRouterBasename } from './utils/routerBasename';
 
 function AppLayout() {
+  const routerBasename = getRouterBasename();
+
   return (
     <div className='App'>
-      <Router>
+      <Router basename={routerBasename}>
         <ScrollToTop />
         <Navbar />
         <div className='boton-whatsapp'>
