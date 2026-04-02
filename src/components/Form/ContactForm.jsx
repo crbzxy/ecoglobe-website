@@ -1,116 +1,127 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
+import { sendContact } from '../../services/contactService';
 
-import axios from 'axios';
-import { withRouter } from 'react-router';
+const initialFormState = {
+  name: '',
+  email: '',
+  phone: '',
+  message: '',
+};
 
-class ContactForm extends Component {
-  constructor() {
-    super();
-    this.state = {
-      name: '',
-      email: '',
-      phone: '',
-      message: '',
-      status: 'Enviar',
-    };
-  }
+const ContactForm = () => {
+  const history = useHistory();
+  const [formValues, setFormValues] = useState(initialFormState);
+  const [statusLabel, setStatusLabel] = useState('Enviar');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
-  handleSubmit(event) {
+  const handleChange = (event) => {
+    const { id, value } = event.target;
+    setFormValues((previousValues) => ({
+      ...previousValues,
+      [id]: value,
+    }));
+  };
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    this.setState({ status: 'Enviando...' });
-    axios({
-      method: 'POST',
-      url: 'https://ecoglobe-contact-server-production.up.railway.app/contact',
-      data: this.state,
-    }).then((response) => {
-      if (response.data.status === 'sent') {
-        this.props.history.push('/success');
-        console.log('Mensaje enviado');
-
-        this.setState({ name: '', email: '', message: '', status: 'Enviado' });
-      } else if (response.data.status === 'failed') {
-        this.props.history.push('/Error');
-        console.log('Error en el mensaje, porfavor intenta de nuevo');
-      }
-    });
-  }
-
-  handleChange(event) {
-    const field = event.target.id;
-    if (field === 'name') {
-      this.setState({ name: event.target.value });
-    } else if (field === 'email') {
-      this.setState({ email: event.target.value });
-    } else if (field === 'phone') {
-      this.setState({ phone: event.target.value });
-    } else if (field === 'message') {
-      this.setState({ message: event.target.value });
+    if (isSubmitting) {
+      return;
     }
-  }
-  render() {
-    let buttonText = this.state.status;
-    return (
-      <div className='div'>
-        <div className='titulo'>Déjanos un mensaje:</div>
-        <form
-          className='formulario'
-          onSubmit={this.handleSubmit.bind(this)}
-          method='POST'>
-          <div className='labelArea'>
-            <label htmlFor='Nombre'> Nombre</label>
-            <input
-              placeholder='Nombre completo'
-              type='text'
-              id='name'
-              value={this.state.name}
-              onChange={this.handleChange.bind(this)}
-              required
-            />
-          </div>
-          <div>
-            <label htmlFor='email'> Correo electrónico</label>
-            <input
-              placeholder='Correo electrónico'
-              type='email'
-              id='email'
-              value={this.state.email}
-              onChange={this.handleChange.bind(this)}
-              required
-            />
-          </div>
-          <div>
-            <label htmlFor='telefono'> Teléfono</label>
-            <input
-              placeholder='Teléfono'
-              type='phone'
-              id='phone'
-              value={this.state.phone}
-              onChange={this.handleChange.bind(this)}
-              required
-            />
-          </div>
-          <div>
-            <label htmlFor='Mensaje'>Mensaje:</label>
-            <textarea
-              placeholder='¿Cómo podemos ayudarte?'
-              id='message'
-              value={this.state.message}
-              onChange={this.handleChange.bind(this)}
-              required
-            />
-          </div>
-          <small>
-            Al enviar este formulario acepto ser parte de la lista de correos de
-            Eco Globe, las condiciones de uso del servicio y la política de
-            privacidad.
-          </small>
-          <button className='btn-secundario' type='submit'>
-            {buttonText}
-          </button>
-        </form>
-      </div>
-    );
-  }
-}
+    setIsSubmitting(true);
+    setStatusLabel('Enviando...');
+    setErrorMessage('');
 
-export default withRouter(ContactForm);
+    try {
+      const response = await sendContact(formValues);
+      if (response.status === 'sent') {
+        setFormValues(initialFormState);
+        setStatusLabel('Enviado');
+        history.push('/success');
+        return;
+      }
+      setStatusLabel('Enviar');
+      setErrorMessage(
+        'No pudimos enviar tu mensaje. Por favor, intenta de nuevo.',
+      );
+      history.push('/Error');
+    } catch (error) {
+      setStatusLabel('Enviar');
+      setErrorMessage(
+        'Ocurrió un problema al enviar tu mensaje. Revisa tu conexión e inténtalo nuevamente.',
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  return (
+    <div className='div'>
+      <div className='titulo'>Déjanos un mensaje:</div>
+      <form className='formulario' onSubmit={handleSubmit} method='POST'>
+        <div className='labelArea'>
+          <label htmlFor='name'> Nombre</label>
+          <input
+            placeholder='Nombre completo'
+            type='text'
+            id='name'
+            value={formValues.name}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor='email'> Correo electrónico</label>
+          <input
+            placeholder='Correo electrónico'
+            type='email'
+            id='email'
+            value={formValues.email}
+            onChange={handleChange}
+            required
+            aria-invalid={Boolean(errorMessage)}
+          />
+        </div>
+        <div>
+          <label htmlFor='phone'> Teléfono</label>
+          <input
+            placeholder='Teléfono'
+            type='tel'
+            id='phone'
+            value={formValues.phone}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor='message'>Mensaje:</label>
+          <textarea
+            placeholder='¿Cómo podemos ayudarte?'
+            id='message'
+            value={formValues.message}
+            onChange={handleChange}
+            required
+            aria-invalid={Boolean(errorMessage)}
+          />
+        </div>
+        <small>
+          Al enviar este formulario acepto ser parte de la lista de correos de
+          Eco Globe, las condiciones de uso del servicio y la política de
+          privacidad.
+        </small>
+        {errorMessage && (
+          <div className='form-error' aria-live='assertive'>
+            {errorMessage}
+          </div>
+        )}
+        <button className='btn-secundario' type='submit' disabled={isSubmitting}>
+          {statusLabel}
+        </button>
+      </form>
+    </div>
+  );
+};
+
+export default ContactForm;
+

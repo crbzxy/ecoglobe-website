@@ -1,35 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ExternalLink } from 'react-external-link';
 import * as FaIcons from 'react-icons/fa';
+import { useNavbarScroll } from './useNavbarScroll';
 
 import Logo from '../../img/logo.png';
 function Navbar() {
   const [click, setClick] = useState(false);
+  const { isScrolled } = useNavbarScroll();
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
-  useEffect(() => {
-    navegador();
-  });
-  const navegador = () => {
-    var navScr = document.getElementById('navScr');
-    window.onscroll = function () {
-      if (
-        document.body.scrollTop >= 30 ||
-        document.documentElement.scrollTop >= 30
-      ) {
-        navScr.classList.add('nav-colored');
-        navScr.classList.remove('nav-transparent');
-      } else {
-        navScr.classList.add('nav-transparent');
-        navScr.classList.remove('nav-colored');
-      }
-    };
-  };
+
+  const navbarClassName = isScrolled
+    ? 'navbar nav-colored'
+    : 'navbar nav-transparent';
 
   return (
-    <nav id='navScr' className='navbar '>
+    <nav id='navScr' className={navbarClassName}>
       <Link to='/' className='navbar_logo' onClick={closeMobileMenu}>
         <img src={Logo} alt='EcoGlobe' />
       </Link>
