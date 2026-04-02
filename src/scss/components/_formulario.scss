@@ -1,3 +1,6 @@
+@use '../libs/variables' as *;
+@use '../libs/mixins' as *;
+
 .formulario {
       margin-bottom: 1rem;
       background-color: $app-1;

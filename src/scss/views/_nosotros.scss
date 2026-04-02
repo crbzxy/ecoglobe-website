@@ -1,3 +1,6 @@
+@use '../libs/variables' as *;
+@use '../libs/mixins' as *;
+
 .Nosotros {
   padding: 1rem;
   h2 {

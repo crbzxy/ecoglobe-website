@@ -1,3 +1,18 @@
+@use 'libs/type';
+@use 'libs/mixins' as *;
+@use 'libs/variables' as *;
+@use 'components/navbar';
+@use 'components/slides';
+@use 'components/footer';
+@use 'views/nosotros';
+@use 'views/services';
+@use 'views/PanelAire';
+@use 'views/contacto';
+@use 'components/formulario';
+@use 'views/success';
+@use '../components/Contador/Count';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;800&display=swap');
+
 * {
   padding: 0;
   margin: 0;
@@ -8,13 +23,6 @@
 html {
   scroll-behavior: smooth;
 }
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;800&display=swap');
-@import 'libs/type';
-@import 'libs/mixins';
-@import 'libs/variables';
-@import 'components/navbar';
-@import 'components/slides';
-@import 'components/footer';
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -422,13 +430,6 @@ body {
   }
 }
 
-//views
-
-@import 'views/nosotros';
-@import 'views/services';
-@import 'views/PanelAire';
-@import 'views/contacto';
-
 .cards-porque {
   margin-top: 2rem;
   display: grid;
@@ -459,8 +460,6 @@ body {
   text-transform: uppercase;
 }
 
-@import 'components/formulario';
-
 details {
   position: relative;
   font-size: 0.8rem;
@@ -483,9 +482,6 @@ details {
     padding: 0.5rem;
   }
 }
-
-@import 'views/success';
-
 hr {
   border: none;
   background-color: $app-2;
@@ -515,8 +511,6 @@ hr {
 .servicios-home {
   min-height: auto !important;
 }
-
-@import '../components/Contador/Count';
 
 .Faq {
   display: flex;

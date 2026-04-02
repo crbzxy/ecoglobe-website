@@ -1,14 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './scss/Index.scss';
-import App from './App';
-
-
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+// Punto de entrada antiguo usado por Create React App.
+// Vite utiliza `src/main.jsx` como entry principal.
 

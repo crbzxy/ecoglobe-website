@@ -8,7 +8,7 @@ import Aire from "../img/sunac.png";
 //import * as FaIcons from "react-icons/fa";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
-import FormPanelAire from "../components/Form/FormPanelAire.js";
+import FormPanelAire from "../components/Form/FormPanelAire";
 
 function PanelAire() {
   return (

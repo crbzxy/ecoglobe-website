@@ -11,7 +11,7 @@ import Panel from '../img/panel.png';
 import Aire from '../img/sunac.png';
 import Nosotros from '../img/nosotros-home.png';
 import Count from '../components/Contador/Contador';
-import data from '../components/Contador/data.json';
+import data from '../components/Contador/data';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import Carrousel from '../components/Carrousel';
@@ -199,7 +199,7 @@ function Home() {
         <br />
         <div className='contadores'>
           {data.counts.map((count) => (
-            <Count key={count.id} data={count} />
+            <Count key={count.label} data={count} />
           ))}
         </div>
       </section>
