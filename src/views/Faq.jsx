@@ -1,82 +1,96 @@
-import React, { useEffect } from "react";
-import Invierte from "../img/camioneta.jpeg"
+import React, { useEffect, useMemo, useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import camioneta from "../img/camioneta.jpeg";
+import { faqItems } from "../features/faq/faqData";
+import { FaqAccordionItem } from "../features/faq/FaqAccordionItem";
+import { FaqSearchField } from "../features/faq/FaqSearchField";
+
+function normalizeForSearch(text) {
+  return text
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/\p{M}/gu, "");
+}
+
+function filterFaqItems(items, rawQuery) {
+  const trimmed = rawQuery.trim();
+  if (!trimmed) {
+    return items;
+  }
+  const needle = normalizeForSearch(trimmed);
+  return items.filter((item) => {
+    const haystack = normalizeForSearch(
+      `${item.question} ${item.answer} ${(item.keywords || []).join(" ")}`
+    );
+    return haystack.includes(needle);
+  });
+}
+
 function Faq() {
+  const [openId, setOpenId] = useState(null);
+  const [query, setQuery] = useState("");
+  const filteredItems = useMemo(() => filterFaqItems(faqItems, query), [query]);
 
   useEffect(() => {
-    // Fetch all the details element.
-    const details = document.querySelectorAll("details");
-    // Add the onclick listeners.
-    details.forEach((targetDetail) => {
-      targetDetail.addEventListener("click", () => {
-        // Close all the details that are not targetDetail.
-
-        details.forEach((detail) => {
-          if (detail !== targetDetail) {
-            detail.removeAttribute("open");
-          }
-        });
-      });
-    });
-  }, []);
-
+    if (openId && !filteredItems.some((item) => item.id === openId)) {
+      setOpenId(null);
+    }
+  }, [filteredItems, openId]);
 
   return (
-    <div className=" contenedor Faq">
-      <h1>Preguntas Frecuentes</h1>
+    <div className="contenedor faq-page">
+      <header className="faq-page__intro">
+        <h1 className="faq-page__title">Preguntas frecuentes</h1>
+        <p className="faq-page__lead">
+          Resolvemos las dudas más comunes sobre paneles solares, la red de CFE y
+          cómo elegir una instalación adecuada a tu consumo.
+        </p>
+      </header>
 
-      <div className="contenedor-preguntas">
-        <div className="img-preguntas">
-          <LazyLoadImage effect="blur" src={Invierte} alt="Eco Globe, tu mejor solución en paneles solares" />
-        </div>
-        <div className="preguntas">
-          <details>
-            <summary>¿Qué es un sistema Interconectado a la red?</summary>
-            <p> Un sistema de paneles solares interconectados a la red es simplemente un
-              sistema que está conectado a la red eléctrica de CFE y, por lo tanto,
-              utiliza la electricidad tanto del sistema de paneles solares como de la
-              red eléctrica. Debido a esto, un sistema solar interconectado no tiene
-              que satisfacer todas las demandas de electricidad del hogar.</p>
-          </details>
+      <div className="faq-page__layout">
+        <figure className="faq-page__media">
+          <LazyLoadImage
+            effect="blur"
+            src={camioneta}
+            alt="Equipo e instalación de paneles solares Eco Globe"
+          />
+          <figcaption>
+            Asesoría y proyectos a la medida de tu hogar o negocio.
+          </figcaption>
+        </figure>
 
-          <details>
-            <summary>¿Si se va la luz, con los paneles tendré luz? </summary>
-            <p>Sí es un sistema interconectado a la red de CFE, si se va la luz no
-              tendrás luz, a menos de que cuentes con un sistema híbrido (sistema
-              interconectado a CFE + baterías) y puedas utilizar las baterías de
-              respaldo.</p>
-          </details>
-          <details>
-            <summary>¿Cómo sé que una empresa es confiable? </summary>
-            <p>Que cumpla con conocimiento y experiencias comprobables en el sector fotovoltaico, con portafolios de proyectos en su página web, testimonios de clientes, para asegurar que responderán una vez instalados los paneles y te proporcionarán asesoría y servicio de mantenimiento cuando sea necesario.
-            </p>
-          </details>
-          <details>
-            <summary>¿Los paneles de más capacidad son los mejores? </summary>
-            <p>No, depende de la aplicación. para granjas solares son recomendables los grandes, pero para casas son recomendables más chicos, ya que ocupan menos espacio, son más ligeros y más aptos para los techos. Lo importante es que sean paneles de la mejor calidad.
-            </p>
-          </details>
-          <details>
-            <summary>¿Qué son los kilowatts? </summary>
-            <p>Es la unidad de medida usada por CFE para cobrar el consumo, si tenemos 10 focos de 100 watts y los usamos una hora consumiremos 1 kw-hora.
-            </p>
-          </details>
-          <details>
-            <summary>¿Si pongo paneles ya no pago nada a CFE?</summary>
-            <p>
-              Aunque generes el 100%, se paga una renta mínima, que es alrededor de $80 pesos por la renta del servicio.
-            </p></details>
-          <details>
-            <summary>¿Cuántos paneles necesito? </summary>
-            <p>Depende de tu consumo o pago a cfe, así como de tus planes a instalar otros equipos, como aires acondicionados, entre otros, que pueden incrementar el consumo. también se debe tomar en cuenta, cuánto quieres ahorrar, el porcentaje de ahorro puede ir desde el 100%, 80%, 50%, etc.
-            </p>
-          </details>
-          <details>
-            <summary>¿Los paneles son solo para los que pagan mucho?</summary>
-            <p>
-              Es una excelente opción para los que pagan mucho, pero también para los que pagan poco, pero quieren instalar aires acondicionados, estufa eléctrica, secadora eléctrica, calentón eléctrico, etc. para que no incremente la tarifa.
-            </p></details>
-        </div>
+        <section
+          className="faq-page__main"
+          aria-label="Listado de preguntas frecuentes"
+        >
+          <FaqSearchField
+            value={query}
+            onChange={setQuery}
+            resultCount={filteredItems.length}
+            totalCount={faqItems.length}
+          />
+
+          {filteredItems.length === 0 ? (
+            <div className="faq-empty">
+              <p className="faq-empty__title">No hay resultados</p>
+              <p className="faq-empty__text">
+                Prueba con otras palabras (por ejemplo «baterías», «recibo» o
+                «paneles») o borra el filtro para ver todas las preguntas.
+              </p>
+            </div>
+          ) : (
+            <div className="faq-accordion">
+              {filteredItems.map((item) => (
+                <FaqAccordionItem
+                  key={item.id}
+                  item={item}
+                  isOpen={openId === item.id}
+                  onOpenChange={setOpenId}
+                />
+              ))}
+            </div>
+          )}
+        </section>
       </div>
     </div>
   );

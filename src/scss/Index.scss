@@ -473,29 +473,6 @@ body {
 
 @import 'components/formulario';
 
-details {
-  position: relative;
-  font-size: 0.8rem;
-  max-width: 600px;
-  width: 100%;
-  padding: 5px;
-  background-color: $color-bg-subtle;
-  p {
-    margin-top: 0.5rem !important;
-    margin-left: 10px !important;
-    &:before {
-      content: 'R= ';
-      color: $app-1;
-      font-weight: bolder;
-    }
-  }
-  summary {
-    background-color: $app-1;
-    color: $color-text-inverse;
-    padding: 0.5rem;
-  }
-}
-
 @import 'views/success';
 
 hr {
@@ -530,44 +507,7 @@ hr {
 
 @import '../components/Contador/Count';
 
-.Faq {
-  display: flex;
-  flex-flow: column;
-  .contenedor-preguntas {
-    width: 100%;
-    margin-top: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    @include tablet {
-      flex-flow: column-reverse;
-    }
-    @include phone {
-      flex-flow: column;
-    }
-
-    .img-preguntas {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      img {
-        width: 100%;
-        max-width: 580px;
-        border-radius: 2rem;
-        padding: 0.5rem;
-      }
-    }
-    .preguntas {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-flow: column;
-      width: 100%;
-    }
-  }
-}
+@import 'views/faq';
 
 .aviso {
   color: $color-primary;
