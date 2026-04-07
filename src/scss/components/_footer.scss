@@ -1,8 +1,8 @@
 
 .footer{
   
-  background-color: #02247d;
-  color:white;
+  background-color: $color-primary-dark;
+  color: $color-text-inverse;
  width: 100%;
   display: flex;
   flex-flow: column;
@@ -56,10 +56,10 @@ padding-top:1rem ;
 
         a{
           text-decoration: none;
-          color: white;
+          color: $color-text-inverse;
           cursor: pointer;
           :hover{
-            color: #29d705;
+            color: $color-accent-soft;
           }
         }
         @include phone{

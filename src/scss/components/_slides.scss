@@ -92,7 +92,7 @@ min-height: 400px;
   .descripcion-hero {
     font-size: 0.89rem;
     max-width: 450px;
-    color: #fff;
+    color: $color-slide-text;
     @include phone {
       display: none !important;
     }
@@ -101,32 +101,32 @@ min-height: 400px;
     margin-top: 1rem;
     text-decoration: none;
     padding: 0.3rem 0.9rem;
-    color: $app-1 !important;
+    color: $color-primary !important;
 
-    background-color: $app-2;
+    background-color: $color-accent;
 
     border-radius: 6px;
     letter-spacing: 0.3px;
     font-weight: 600;
     &:hover {
       transition: all 0.2s ease-in-out;
-      color: $app-1 !important;
-      background-color: $app-2;
+      color: $color-primary !important;
+      background-color: $color-accent;
     }
   }
 }
 
 .btn-slider {
   font-size: 1.8rem;
-  color: rgba(255, 238, 238, 0.247);
-  background-color: rgba(39, 39, 39, 0.13);
+  color: $color-slide-arrow;
+  background-color: $color-slide-arrow-bg;
   z-index: 10;
   cursor: pointer;
   user-select: none;
   position: absolute;
   
   &:hover {
-    color: #fff;
+    color: $color-slide-text;
   }
 }
 .left-arrow {

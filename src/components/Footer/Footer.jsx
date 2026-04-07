@@ -42,8 +42,6 @@ function Footer() {
             </Link>
             <li> <a className="btn-navbar" href="tel:6643824379"> <i className="fas fa-phone-square-alt"></i> (664) 382-4379</a></li>
 
-            <li><a href="mailto:info@ecoglobe.mx"> <i className="fas fa-envelope"></i> info@ecoglobe.mx</a></li>
-
             <div className="redes">
             <ExternalLink href='https://www.facebook.com/ecoglobe.mx'>
           <li>

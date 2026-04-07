@@ -8,13 +8,13 @@
     grid-template-rows: auto;
     gap: 1rem;
     .card-servicios {
-      background-color: rgb(238, 238, 238);
+      background-color: $color-bg-panel;
 
       border-radius: 8px;
       padding: 1rem !important;
       box-sizing: border-box;
-      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.192),
-        0 10px 10px rgba(0, 0, 0, 0.144);
+      box-shadow: 0 14px 28px $shadow-services,
+        0 10px 10px $shadow-services-secondary;
       margin-top: 1rem;
       align-items: center;
       display: flex;

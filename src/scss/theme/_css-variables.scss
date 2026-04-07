@@ -1,0 +1,11 @@
+// Variables CSS para uso puntual en JSX o utilidades (sincronizadas con _tokens.scss)
+@import 'tokens';
+
+:root {
+  --color-primary: #{$color-primary};
+  --color-primary-dark: #{$color-primary-dark};
+  --color-accent: #{$color-accent};
+  --color-text: #{$color-text};
+  --color-text-inverse: #{$color-text-inverse};
+  --color-bg: #{$color-bg};
+}

@@ -1,0 +1,51 @@
+// Fuente de verdad de color y tipografía del sitio (tema EcoGlobe)
+
+// Marca — primarios
+$color-primary: #004aad;
+$color-primary-dark: #02247d;
+$color-primary-mid: #004ead;
+$color-primary-deep: #00247d;
+
+// Marca — acento / lima
+$color-accent: #2bd600;
+$color-accent-alt: #2bd601;
+$color-accent-soft: #29d705;
+
+// Texto y fondos neutros
+$color-text: #000000;
+$color-text-inverse: #ffffff;
+$color-bg: #ffffff;
+$color-bg-muted: #f3f3f3;
+$color-bg-subtle: #f1f1f1;
+$color-bg-panel: #eeeeee;
+$color-bg-dropdown: #e6e6e6;
+$color-border: #cccccc;
+
+// UI / estados
+$color-dropdown-hover: #862eeb;
+$color-form-link: #00a2ff;
+$color-form-accent: #c300ff;
+$color-whatsapp: rgb(79, 206, 93);
+
+// Slides / overlays
+$color-slide-text: #ffffff;
+$color-slide-arrow: rgba(255, 238, 238, 0.247);
+$color-slide-arrow-bg: rgba(39, 39, 39, 0.13);
+
+// Sombras (sobre negro neutro)
+$shadow-soft: rgba(0, 0, 0, 0.12);
+$shadow-medium: rgba(0, 0, 0, 0.24);
+$shadow-nav: rgba(0, 0, 0, 0.055);
+$shadow-services: rgba(0, 0, 0, 0.192);
+$shadow-services-secondary: rgba(0, 0, 0, 0.144);
+
+// Degradado hero body
+$color-bg-gradient-start: $color-bg;
+$color-bg-gradient-end: #f7f7f760;
+
+// Alias históricos (compatibilidad con partials existentes)
+$app-1: $color-primary;
+$app-2: $color-accent;
+
+// Tipografía
+$font-family-aviso: Arial, Helvetica, sans-serif;

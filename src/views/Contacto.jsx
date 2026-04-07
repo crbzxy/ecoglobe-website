@@ -23,13 +23,6 @@ function Contacto() {
               </a>
             </li>
             <li>
-              <p>
-                <i className="fas fa-envelope" />
-                Escríbenos:
-              </p>
-              <a href="mailto:info@ecoglobe.mx"> info@ecoglobe.mx</a>
-            </li>
-            <li>
               {" "}
               <p>
                 <i className="fas fa-phone-square-alt" /> Llámanos

@@ -5,8 +5,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 1% 9%;
-  background-color: rgb(255, 255, 255);
-  color: $app-1;
+  background-color: $color-bg;
+  color: $color-primary;
 
   width: 100%;
   // Por encima del carrusel (Bootstrap) y del widget WhatsApp (z-index 1030)
@@ -64,10 +64,10 @@
 
     a.navbar_menu_link {
       font-weight: 600;
-      color: $app-1;
+      color: $color-primary;
       cursor: pointer;
       &:hover {
-        color: $app-2 !important;
+        color: $color-accent !important;
       }
     }
 
@@ -82,7 +82,7 @@
     left: 0px;
     flex-flow: column;
     position: absolute;
-    background-color: #004ead;
+    background-color: $color-primary-mid;
     height: calc(100vh - 62px);
     width: 100%;
     display: flex;
@@ -101,7 +101,7 @@
       padding: 1rem;
       width: 100%;
       height: auto;
-      color: white !important;
+      color: $color-text-inverse !important;
     }
   }
 
@@ -120,16 +120,16 @@
 
   z-index: 100;
 
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 3px $shadow-soft, 0 1px 2px $shadow-medium;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 
   li {
     position: relative;
-    background-color: rgb(230, 230, 230);
+    background-color: $color-bg-dropdown;
     cursor: pointer;
 
     &:hover {
-      color: #862eeb;
+      color: $color-dropdown-hover;
     }
   }
 
@@ -149,19 +149,19 @@
   height: 100%;
   font-weight: normal;
   text-decoration: none;
-  color: white;
+  color: $color-text-inverse;
   padding: 1rem 0.5rem;
   &:hover {
-    color: #000 !important;
+    color: $color-text !important;
   }
 }
 
 .nav-colored {
   transition: 0.1s ease-in-out all;
-  background-color: rgb(255, 255, 255);
+  background-color: $color-bg;
   width: 100%;
   padding: 1% 5%;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.055), 0 10px 10px rgba(0, 0, 0, 0.055);
+  box-shadow: 0 14px 28px $shadow-nav, 0 10px 10px $shadow-nav;
   .navbar_logo {
     img {
       max-height: 35px;
@@ -174,21 +174,21 @@
 .nav-transparent {
   height: 75px;
 
-  background-color: white;
+  background-color: $color-bg;
 }
 
 .btn-navbar {
   padding: 0.3rem 0.9rem;
-  color: white !important;
-  background-color: $app-1;
+  color: $color-text-inverse !important;
+  background-color: $color-primary;
 
   border-radius: 6px;
   letter-spacing: 0.3px;
   font-weight: 400;
   &:hover {
     transition: all 0.2s ease-in-out;
-    color: $app-1 !important;
+    color: $color-primary !important;
 
-    background-color: $app-2;
+    background-color: $color-accent;
   }
 }

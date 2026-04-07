@@ -7,7 +7,6 @@ function Aviso() {
         border={0}
         style={{
           textAlign: "left",
-          color: "#004AAD;",
           fontFamily: "Arial, Helvetica, sans-serif",
           fontWeight: "lighter",
           fontSize: 20,
@@ -16,8 +15,7 @@ function Aviso() {
           padding: 0,
           margin: 0,
           border: "none",
-          borderCollapse: "collapse",
-        }}
+          borderCollapse: "collapse"}}
         align="center"
       >
         <tbody>
@@ -25,11 +23,9 @@ function Aviso() {
             <td
               style={{
                 textAlign: "center",
-                color: "#004AAD;",
                 fontFamily: "Arial, Helvetica, sans-serif",
                 fontWeight: "bold",
-                fontSize: 20,
-              }}
+                fontSize: 20}}
             >
               AVISO DE PRIVACIDAD
             </td>
@@ -43,26 +39,22 @@ function Aviso() {
         border={0}
         style={{
           textAlign: "left",
-          color: "#004AAD;",
           fontFamily: "Arial, Helvetica, sans-serif",
           fontWeight: "lighter",
           fontSize: 13,
           width: "100%",
           padding: 0,
           border: "none",
-          borderCollapse: "collapse",
-        }}
+          borderCollapse: "collapse"}}
       >
         <tbody>
           <tr>
             <td
               style={{
                 textAlign: "left",
-                color: "#004AAD;",
                 fontFamily: "Arial, Helvetica, sans-serif",
                 fontWeight: "lighter",
-                fontSize: 13,
-              }}
+                fontSize: 13}}
             >
               ECO GLobe S de RL de CV, mejor conocido como ECO Globe, con
               domicilio en calle R de la Brisa 2011, colonia Fracc Altabrisa,
@@ -79,11 +71,9 @@ function Aviso() {
             <td
               style={{
                 textAlign: "left",
-                color: "#004AAD;",
                 fontFamily: "Arial, Helvetica, sans-serif",
                 fontWeight: "bold",
-                fontSize: 13,
-              }}
+                fontSize: 13}}
             >
               ¿Para qué fines utilizaremos sus datos personales?
             </td>
@@ -95,11 +85,9 @@ function Aviso() {
             <td
               style={{
                 textAlign: "left",
-                color: "#004AAD;",
                 fontFamily: "Arial, Helvetica, sans-serif",
                 fontWeight: "lighter",
-                fontSize: 13,
-              }}
+                fontSize: 13}}
             >
               Los datos personales que recabamos de usted, los utilizaremos para
               las siguientes finalidades que son necesarias para el servicio que
@@ -110,11 +98,9 @@ function Aviso() {
             <td
               style={{
                 textAlign: "left",
-                color: "#004AAD;",
                 fontFamily: "Arial, Helvetica, sans-serif",
                 fontWeight: "lighter",
-                fontSize: 13,
-              }}
+                fontSize: 13}}
             >
               <ul>
                 <li>Tramite de Contrato de Interconexion con CFE</li>
@@ -126,11 +112,9 @@ function Aviso() {
             <td
               style={{
                 textAlign: "left",
-                color: "#004AAD;",
                 fontFamily: "Arial, Helvetica, sans-serif",
                 fontWeight: "lighter",
-                fontSize: 13,
-              }}
+                fontSize: 13}}
             >
               <br />
               De manera adicional, utilizaremos su información personal para las
@@ -146,11 +130,9 @@ function Aviso() {
             <td
               style={{
                 textAlign: "left",
-                color: "#004AAD;",
                 fontFamily: "Arial, Helvetica, sans-serif",
                 fontWeight: "lighter",
-                fontSize: 13,
-              }}
+                fontSize: 13}}
             >
               <ul>
                 <li>Presentar Cotizaciones</li>
@@ -163,11 +145,9 @@ function Aviso() {
             <td
               style={{
                 textAlign: "left",
-                color: "#004AAD;",
                 fontFamily: "Arial, Helvetica, sans-serif",
                 fontWeight: "lighter",
-                fontSize: 13,
-              }}
+                fontSize: 13}}
             >
               En caso de que no desee que sus datos personales se utilicen para
               estos fines secundarios, indíquelo a continuación:
@@ -190,22 +170,18 @@ function Aviso() {
             <td
               style={{
                 textAlign: "left",
-                color: "#004AAD;",
                 fontFamily: "Arial, Helvetica, sans-serif",
                 fontWeight: "lighter",
-                fontSize: 13,
-              }}
+                fontSize: 13}}
             />
           </tr>
           <tr>
             <td
               style={{
                 textAlign: "left",
-                color: "#004AAD;",
                 fontFamily: "Arial, Helvetica, sans-serif",
                 fontWeight: "lighter",
-                fontSize: 13,
-              }}
+                fontSize: 13}}
             >
               <br />
               La negativa para el uso de sus datos personales para estas
@@ -221,11 +197,9 @@ function Aviso() {
             <td
               style={{
                 textAlign: "left",
-                color: "#004AAD;",
                 fontFamily: "Arial, Helvetica, sans-serif",
                 fontWeight: "bold",
-                fontSize: 13,
-              }}
+                fontSize: 13}}
             >
               ¿Qué datos personales utilizaremos para estos fines?
             </td>
@@ -237,11 +211,9 @@ function Aviso() {
             <td
               style={{
                 textAlign: "left",
-                color: "#004AAD;",
                 fontFamily: "Arial, Helvetica, sans-serif",
                 fontWeight: "lighter",
-                fontSize: 13,
-              }}
+                fontSize: 13}}
             >
               Para llevar a cabo las finalidades descritas en el presente aviso
               de privacidad, utilizaremos los siguientes datos personales:
@@ -272,11 +244,9 @@ function Aviso() {
             <td
               style={{
                 textAlign: "left",
-                color: "#004AAD;",
                 fontFamily: "Arial, Helvetica, sans-serif",
                 fontWeight: "bold",
-                fontSize: 13,
-              }}
+                fontSize: 13}}
             >
               ¿Con quién compartimos su información personal y para qué fines?
             </td>
@@ -288,11 +258,9 @@ function Aviso() {
             <td
               style={{
                 textAlign: "left",
-                color: "#004AAD;",
                 fontFamily: "Arial, Helvetica, sans-serif",
                 fontWeight: "lighter",
-                fontSize: 13,
-              }}
+                fontSize: 13}}
             >
               Le informamos que sus datos personales son compartidos dentro del
               país con las siguientes personas, empresas, organizaciones o
@@ -308,14 +276,12 @@ function Aviso() {
                 align="center"
                 style={{
                   textAlign: "left",
-                  color: "#004AAD;",
                   fontFamily: "Arial, Helvetica, sans-serif",
                   fontWeight: "lighter",
                   fontSize: 13,
                   padding: 0,
                   width: "100%",
-                  borderCollapse: "collapse",
-                }}
+                  borderCollapse: "collapse"}}
                 border={1}
               >
                 <tbody>
@@ -323,33 +289,27 @@ function Aviso() {
                     <td
                       style={{
                         textAlign: "left",
-                        color: "#004AAD;",
                         fontFamily: "Arial, Helvetica, sans-serif",
                         fontWeight: "bold",
-                        fontSize: 13,
-                      }}
+                        fontSize: 13}}
                     >
                       Destinatario de los datos personales
                     </td>
                     <td
                       style={{
                         textAlign: "left",
-                        color: "#004AAD;",
                         fontFamily: "Arial, Helvetica, sans-serif",
                         fontWeight: "bold",
-                        fontSize: 13,
-                      }}
+                        fontSize: 13}}
                     >
                       Finalidad
                     </td>
                     <td
                       style={{
                         textAlign: "left",
-                        color: "#004AAD;",
                         fontFamily: "Arial, Helvetica, sans-serif",
                         fontWeight: "bold",
-                        fontSize: 13,
-                      }}
+                        fontSize: 13}}
                     >
                       Requiere del consentimiento
                     </td>
@@ -371,14 +331,12 @@ function Aviso() {
         align="left"
         style={{
           textAlign: "left",
-          color: "#004AAD;",
           fontFamily: "Arial, Helvetica, sans-serif",
           fontWeight: "lighter",
           fontSize: 13,
           padding: 0,
           width: "100%",
-          borderCollapse: "collapse",
-        }}
+          borderCollapse: "collapse"}}
         border={0}
       >
         <tbody>
@@ -386,22 +344,18 @@ function Aviso() {
             <td
               style={{
                 textAlign: "left",
-                color: "#004AAD;",
                 fontFamily: "Arial, Helvetica, sans-serif",
                 fontWeight: "lighter",
-                fontSize: 13,
-              }}
+                fontSize: 13}}
             />
           </tr>
           <tr>
             <td
               style={{
                 textAlign: "left",
-                color: "#004AAD;",
                 fontFamily: "Arial, Helvetica, sans-serif",
                 fontWeight: "lighter",
-                fontSize: 13,
-              }}
+                fontSize: 13}}
             >
               Con relación a las transferencias que requieren de su
               consentimiento, por favor indique a continuación si nos lo otorga:
@@ -419,14 +373,12 @@ function Aviso() {
         align="center"
         style={{
           textAlign: "left",
-          color: "#004AAD;",
           fontFamily: "Arial, Helvetica, sans-serif",
           fontWeight: "lighter",
           fontSize: 13,
           padding: 0,
           width: "100%",
-          borderCollapse: "collapse",
-        }}
+          borderCollapse: "collapse"}}
         border={1}
       >
         <tbody>
@@ -434,33 +386,27 @@ function Aviso() {
             <td
               style={{
                 textAlign: "left",
-                color: "#004AAD;",
                 fontFamily: "Arial, Helvetica, sans-serif",
                 fontWeight: "bold",
-                fontSize: 13,
-              }}
+                fontSize: 13}}
             >
               Destinatario de los datos personales
             </td>
             <td
               style={{
                 textAlign: "left",
-                color: "#004AAD;",
                 fontFamily: "Arial, Helvetica, sans-serif",
                 fontWeight: "bold",
-                fontSize: 13,
-              }}
+                fontSize: 13}}
             >
               Finalidad
             </td>
             <td
               style={{
                 textAlign: "left",
-                color: "#004AAD;",
                 fontFamily: "Arial, Helvetica, sans-serif",
                 fontWeight: "bold",
-                fontSize: 13,
-              }}
+                fontSize: 13}}
             >
               Selecciona
             </td>
@@ -479,14 +425,12 @@ function Aviso() {
         align="center"
         style={{
           textAlign: "left",
-          color: "#004AAD;",
           fontFamily: "Arial, Helvetica, sans-serif",
           fontWeight: "lighter",
           fontSize: 13,
           padding: 0,
           width: "100%",
-          borderCollapse: "collapse",
-        }}
+          borderCollapse: "collapse"}}
         border={0}
       >
         <tbody>
@@ -494,11 +438,9 @@ function Aviso() {
             <td
               style={{
                 textAlign: "left",
-                color: "#004AAD;",
                 fontFamily: "Arial, Helvetica, sans-serif",
                 fontWeight: "bold",
-                fontSize: 13,
-              }}
+                fontSize: 13}}
             >
               <br />
               ¿Cómo puede acceder, rectificar o cancelar sus datos personales, u
@@ -512,11 +454,9 @@ function Aviso() {
             <td
               style={{
                 textAlign: "left",
-                color: "#004AAD;",
                 fontFamily: "Arial, Helvetica, sans-serif",
                 fontWeight: "lighter",
-                fontSize: 13,
-              }}
+                fontSize: 13}}
             >
               Usted tiene derecho a conocer qué datos personales tenemos de
               usted, para qué los utilizamos y las condiciones del uso que les
@@ -536,11 +476,9 @@ function Aviso() {
             <td
               style={{
                 textAlign: "left",
-                color: "#004AAD;",
                 fontFamily: "Arial, Helvetica, sans-serif",
                 fontWeight: "lighter",
-                fontSize: 13,
-              }}
+                fontSize: 13}}
             >
               Para el ejercicio de cualquiera de los derechos ARCO, usted deberá
               presentar la solicitud respectiva a través del siguiente medio:{" "}
@@ -556,14 +494,12 @@ function Aviso() {
         align="left"
         style={{
           textAlign: "left",
-          color: "#004AAD;",
           fontFamily: "Arial, Helvetica, sans-serif",
           fontWeight: "lighter",
           fontSize: 13,
           padding: 0,
           width: "100%",
-          borderCollapse: "collapse",
-        }}
+          borderCollapse: "collapse"}}
         border={0}
       >
         <tbody>
@@ -571,18 +507,15 @@ function Aviso() {
             <td
               style={{
                 textAlign: "left",
-                color: "#004AAD;",
                 fontFamily: "Arial, Helvetica, sans-serif",
                 fontWeight: "lighter",
-                fontSize: 13,
-              }}
+                fontSize: 13}}
             >
               <font
                 style={{
                   fontWeight: "lighter",
                   fontSize: 13,
-                  fontFamily: "Arial, Helvetica, sans-serif",
-                }}
+                  fontFamily: "Arial, Helvetica, sans-serif"}}
               >
                 Para conocer el procedimiento y requisitos para el ejercicio de
                 los derechos ARCO, ponemos a su disposición el siguiente medio:
@@ -598,14 +531,12 @@ function Aviso() {
         align="left"
         style={{
           textAlign: "left",
-          color: "#004AAD;",
           fontFamily: "Arial, Helvetica, sans-serif",
           fontWeight: "lighter",
           fontSize: 13,
           padding: 0,
           width: "100%",
-          borderCollapse: "collapse",
-        }}
+          borderCollapse: "collapse"}}
         border={0}
       >
         <tbody>
@@ -613,11 +544,9 @@ function Aviso() {
             <td
               style={{
                 textAlign: "left",
-                color: "#004AAD;",
                 fontFamily: "Arial, Helvetica, sans-serif",
                 fontWeight: "lighter",
-                fontSize: 13,
-              }}
+                fontSize: 13}}
             >
               <br />
               Los datos de contacto de la persona o departamento de datos
@@ -632,11 +561,9 @@ function Aviso() {
             <td
               style={{
                 textAlign: "left",
-                color: "#004AAD;",
                 fontFamily: "Arial, Helvetica, sans-serif",
                 fontWeight: "lighter",
-                fontSize: 13,
-              }}
+                fontSize: 13}}
             >
               a) Nombre de la persona o departamento de datos personales: Manuel
               Ruiz Arias
@@ -678,11 +605,9 @@ function Aviso() {
             <td
               style={{
                 textAlign: "left",
-                color: "#004AAD;",
                 fontFamily: "Arial, Helvetica, sans-serif",
                 fontWeight: "lighter",
-                fontSize: 13,
-              }}
+                fontSize: 13}}
             >
               <br />
               Para conocer el procedimiento y requisitos para la revocación del
@@ -700,14 +625,12 @@ function Aviso() {
         align="center"
         style={{
           textAlign: "left",
-          color: "#004AAD;",
           fontFamily: "Arial, Helvetica, sans-serif",
           fontWeight: "lighter",
           fontSize: 13,
           padding: 0,
           width: "100%",
-          borderCollapse: "collapse",
-        }}
+          borderCollapse: "collapse"}}
         border={0}
       >
         <tbody>
@@ -718,11 +641,9 @@ function Aviso() {
             <td
               style={{
                 textAlign: "left",
-                color: "#004AAD;",
                 fontFamily: "Arial, Helvetica, sans-serif",
                 fontWeight: "bold",
-                fontSize: 13,
-              }}
+                fontSize: 13}}
             >
               ¿Cómo puede limitar el uso o divulgación de su información
               personal?
@@ -735,11 +656,9 @@ function Aviso() {
             <td
               style={{
                 textAlign: "left",
-                color: "#004AAD;",
                 fontFamily: "Arial, Helvetica, sans-serif",
                 fontWeight: "lighter",
-                fontSize: 13,
-              }}
+                fontSize: 13}}
             >
               Con objeto de que usted pueda limitar el uso y divulgación de su
               información personal, le ofrecemos los siguientes medios: <br />
@@ -758,14 +677,12 @@ function Aviso() {
         align="center"
         style={{
           textAlign: "left",
-          color: "#004AAD;",
           fontFamily: "Arial, Helvetica, sans-serif",
           fontWeight: "lighter",
           fontSize: 13,
           padding: 0,
           width: "100%",
-          borderCollapse: "collapse",
-        }}
+          borderCollapse: "collapse"}}
         border={0}
       >
         <tbody>
@@ -773,11 +690,9 @@ function Aviso() {
             <td
               style={{
                 textAlign: "left",
-                color: "#004AAD;",
                 fontFamily: "Arial, Helvetica, sans-serif",
                 fontWeight: "lighter",
-                fontSize: 13,
-              }}
+                fontSize: 13}}
             >
               Asimismo, usted se podrá inscribir a los siguientes registros, en
               caso de que no desee obtener publicidad de nuestra parte: <br />
@@ -797,14 +712,12 @@ function Aviso() {
         align="left"
         style={{
           textAlign: "left",
-          color: "#004AAD;",
           fontFamily: "Arial, Helvetica, sans-serif",
           fontWeight: "lighter",
           fontSize: 13,
           padding: 0,
           width: "100%",
-          borderCollapse: "collapse",
-        }}
+          borderCollapse: "collapse"}}
         border={0}
       >
         <tbody>
@@ -812,12 +725,10 @@ function Aviso() {
             <td
               style={{
                 textAlign: "left",
-                color: "#004AAD;",
                 fontFamily: "Arial, Helvetica, sans-serif",
                 fontWeight: "bold",
                 fontSize: 13,
-                width: "100%",
-              }}
+                width: "100%"}}
             >
               <br />
               ¿Cómo puede conocer los cambios en este aviso de privacidad?
@@ -830,11 +741,9 @@ function Aviso() {
             <td
               style={{
                 textAlign: "left",
-                color: "#004AAD;",
                 fontFamily: "Arial, Helvetica, sans-serif",
                 fontWeight: "lighter",
-                fontSize: 13,
-              }}
+                fontSize: 13}}
             >
               El presente aviso de privacidad puede sufrir modificaciones,
               cambios o actualizaciones derivadas de nuevos requerimientos
@@ -866,11 +775,9 @@ function Aviso() {
             <td
               style={{
                 textAlign: "right",
-                color: "#004AAD;",
                 fontFamily: "Arial, Helvetica, sans-serif",
                 fontWeight: "lighter",
-                fontSize: 13,
-              }}
+                fontSize: 13}}
             >
               Última actualización: 14/07/2021
             </td>

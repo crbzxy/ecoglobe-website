@@ -1,3 +1,5 @@
+@import "../../scss/libs/variables";
+
 @mixin phone {
   @media only screen and (max-width: 649px) {
     @content;
@@ -15,17 +17,17 @@
   margin: 0.75rem auto 1rem;
   max-width: 1080px;
   height: auto;
-  background-color: #004AAD;
+  background-color: $color-primary;
   padding: 1rem;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   height: auto;
   min-height: 180px;
-  color: white;
+  color: $color-text-inverse;
   border-radius:1rem;
  
   .titulob{
-    color: white;
+    color: $color-text-inverse;
   }
   .contadores{
     width: 100%;
@@ -51,7 +53,7 @@
       margin-top: 1rem;
     }
    .numero {
-     color:#2bd600;
+     color: $color-accent;
      letter-spacing: 1.5px;
     font-weight: bold;
       font-size: 2rem;
@@ -61,7 +63,7 @@
     .Count-icon {
       width: 48px;
       height: 48px;
-      color: #2bd600;
+      color: $color-accent;
     }
   }
 }

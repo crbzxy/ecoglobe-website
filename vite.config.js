@@ -2,11 +2,11 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
 import { resolve } from 'path';
 
-const productionBase = 'https://www.ecoglobe.mx/';
-
-export default defineConfig(({ command }) => ({
+// Base relativa: CSS/JS se cargan del mismo origen que la página (evita CORS si
+// el sitio se sirve por ecoglobe.com.mx y www.ecoglobe.mx u otros alias).
+export default defineConfig({
   plugins: [react()],
-  base: command === 'build' ? productionBase : '/',
+  base: '/',
   css: {
     preprocessorOptions: {
       scss: {
@@ -34,6 +34,6 @@ export default defineConfig(({ command }) => ({
       overlay: true
     }
   }
-}));
+});
 
 
