@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { sendContact } from '../../services/contactService';
 
 const initialFormState = {
@@ -10,7 +10,7 @@ const initialFormState = {
 };
 
 const ContactForm = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
   const [formValues, setFormValues] = useState(initialFormState);
   const [statusLabel, setStatusLabel] = useState('Enviar');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -38,14 +38,14 @@ const ContactForm = () => {
       if (response.status === 'sent') {
         setFormValues(initialFormState);
         setStatusLabel('Enviado');
-        history.push('/success');
+        navigate('/success');
         return;
       }
       setStatusLabel('Enviar');
       setErrorMessage(
         'No pudimos enviar tu mensaje. Por favor, intenta de nuevo.',
       );
-      history.push('/Error');
+      navigate('/error');
     } catch (error) {
       setStatusLabel('Enviar');
       setErrorMessage(

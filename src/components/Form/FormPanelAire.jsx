@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { sendPanelMasAire } from '../../services/panelMasAireService';
 
 const initialFormState = {
@@ -10,7 +10,7 @@ const initialFormState = {
 };
 
 const FormPanelAire = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
   const [formValues, setFormValues] = useState(initialFormState);
   const [selectedFile, setSelectedFile] = useState(null);
   const [statusLabel, setStatusLabel] = useState('Enviar');
@@ -58,14 +58,14 @@ const FormPanelAire = () => {
         setFormValues(initialFormState);
         setSelectedFile(null);
         setStatusLabel('Enviado');
-        history.push('/success');
+        navigate('/success');
         return;
       }
       setStatusLabel('Enviar');
       setErrorMessage(
         'No pudimos enviar tu mensaje. Por favor, intenta de nuevo.',
       );
-      history.push('/Error');
+      navigate('/error');
     } catch (error) {
       setStatusLabel('Enviar');
       setErrorMessage(

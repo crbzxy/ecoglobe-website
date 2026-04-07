@@ -22,7 +22,9 @@ const HomePromoSection = () => {
           <p>
             Aprovecha nuestra promoción de verano, y cámbiate a energía solar.
           </p>
-          <Link className='btn-secundario' to='/aire-acondicionado/#airepanel'>
+          <Link
+            className='btn-secundario'
+            to={{ pathname: '/aire-acondicionado', hash: '#airepanel' }}>
             ¡Conoce más!
           </Link>
         </div>

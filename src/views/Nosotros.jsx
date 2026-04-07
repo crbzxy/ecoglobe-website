@@ -7,7 +7,7 @@ import Energi from '../img/energy.svg';
 import Motivation from '../img/motivation.svg';
 import Plusvalia from '../img/home.svg';
 import Count from '../components/Contador/Contador';
-import data from '../components/Contador/data';
+import data from '../components/Contador/counterData';
 import Certificaciones from '../components/Certificaciones';
 function Nosotros() {
   return (

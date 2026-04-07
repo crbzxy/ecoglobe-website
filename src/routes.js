@@ -10,10 +10,9 @@ import PanelesSolares from './views/PanelesSolares';
 import PanelesSolaresAutonomos from './views/PanelesSolaresAutonomos';
 import ProyectoElectricos from './views/ProyectosElectricos';
 import AireAcondicionado from './views/AireAcondicionado';
-import Error from './views/Error';
 
 export const appRoutes = [
-  { path: '/', exact: true, component: Home },
+  { path: '/', component: Home },
   { path: '/servicios', component: Servicios },
   { path: '/nosotros', component: Nosotros },
   { path: '/contacto', component: Contacto },
@@ -25,6 +24,5 @@ export const appRoutes = [
   { path: '/paneles-solares-autonomos', component: PanelesSolaresAutonomos },
   { path: '/soluciones-en-electricidad', component: ProyectoElectricos },
   { path: '/aire-acondicionado', component: AireAcondicionado },
-  { path: '*', component: Error },
 ];
 

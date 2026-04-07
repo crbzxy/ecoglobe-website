@@ -7,4 +7,6 @@
 
 html {
   scroll-behavior: smooth;
+  // Navbar sticky: el ancla no queda tapada arriba al hacer hash / brinco a sección
+  scroll-padding-top: 96px;
 }
