@@ -5,13 +5,14 @@
 }
 .contador {
   h5{font-weight:bold;
-     font-size:1.6rem;}
+     font-size:1.6rem;
+     margin-bottom: 0.75rem;}
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
-  margin: auto;
+  margin: 0.75rem auto 1rem;
   max-width: 1080px;
   height: auto;
   background-color: #004AAD;
@@ -46,7 +47,7 @@
     justify-content: center;
     flex-flow: column;
     @include phone{
-      flex-flow: tablet;
+      flex-flow: column;
       margin-top: 1rem;
     }
    .numero {
@@ -55,6 +56,12 @@
     font-weight: bold;
       font-size: 2rem;
       
+    }
+
+    .Count-icon {
+      width: 48px;
+      height: 48px;
+      color: #2bd600;
     }
   }
 }
