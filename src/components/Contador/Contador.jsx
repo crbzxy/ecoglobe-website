@@ -6,7 +6,7 @@ const Count = props => {
   // label of counter
   // number to increment to
   // duration of count in seconds
-  const {label, number, duration} = props.data
+  const { label, number, duration, Icon } = props.data;
 
   // number displayed by component
   const [count, setCount] = useState("0")
@@ -37,7 +37,9 @@ const Count = props => {
   return (
     
     <div className="Count">
-      <img src={props.data.image} alt="img" />
+      {Icon ? (
+        <Icon className="Count-icon" aria-hidden />
+      ) : null}
       <p className="numero"> {count}</p>
       <p>
       {label}

@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 import Logo from "../../img/logo-f.png";
 import { ExternalLink } from "react-external-link";
 import * as FaIcons from "react-icons/fa";
+
 function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="footer">
       <div className="footer-contenedor">
@@ -62,7 +65,9 @@ function Footer() {
         </div>
       </div>
       <div className="mini-footer">
-        <small>Copyright<sup>©</sup> 2022 EcoGlobe, todos los derechos reservados.</small>
+        <small>
+          Copyright<sup>©</sup> {currentYear} EcoGlobe, todos los derechos reservados.
+        </small>
       </div>
     </footer>
   );

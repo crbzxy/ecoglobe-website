@@ -1,7 +1,7 @@
 import React from "react";
 
 import Iframe from "react-iframe";
-import ContactForm from "../components/Form/ContactForm.js";
+import ContactForm from "../components/Form/ContactForm";
 
 function Contacto() {
   return (
