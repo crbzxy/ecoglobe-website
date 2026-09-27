@@ -7,16 +7,16 @@ export function QuoteBand() {
     <PageContainer>
       <Stack
         direction={{ xs: "column", lg: "row" }}
-        alignItems={{ lg: "center" }}
+        alignItems={{ xs: "flex-start", lg: "center" }}
         justifyContent="space-between"
-        spacing={4}
+        spacing={3}
         sx={{
           bgcolor: "primary.main",
           color: "primary.contrastText",
           borderRadius: 2,
-          px: 2,
-          py: 6,
-          mb: 10
+          px: { xs: 2, md: 4 },
+          py: { xs: 4, md: 6 },
+          mb: { xs: 6, md: 10 }
         }}
       >
         <Box>

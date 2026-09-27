@@ -123,7 +123,16 @@ function StatusBlock({
         <Typography color="text.secondary" sx={{ mt: 1.5 }}>
           {description}
         </Typography>
-        <Box sx={{ mt: 3, display: "flex", gap: 1.5, justifyContent: "center" }}>
+        <Box
+          sx={{
+            mt: 3,
+            display: "flex",
+            flexDirection: { xs: "column", sm: "row" },
+            gap: 1.5,
+            justifyContent: "center",
+            width: "100%"
+          }}
+        >
           {onAction && actionLabel ? (
             <Button onClick={onAction} variant="contained">
               {actionLabel}

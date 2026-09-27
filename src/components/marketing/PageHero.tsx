@@ -38,10 +38,15 @@ export function PageHero({
           <Typography variant="h1" sx={{ mt: 2, maxWidth: 640 }}>
             {title}
           </Typography>
-          <Typography color="text.secondary" sx={{ mt: 3, maxWidth: 520, fontSize: 18 }}>
+          <Typography color="text.secondary" sx={{ mt: 3, maxWidth: 520, fontSize: { xs: 16, md: 18 } }}>
             {description}
           </Typography>
-          <Stack direction="row" flexWrap="wrap" gap={1.5} sx={{ mt: 4 }}>
+          <Stack
+            direction={{ xs: "column", sm: "row" }}
+            flexWrap="wrap"
+            gap={1.5}
+            sx={{ mt: 4, width: { xs: "100%", sm: "auto" } }}
+          >
             {children ?? <CtaButton to="/contacto">Cotiza tu proyecto</CtaButton>}
           </Stack>
         </Box>

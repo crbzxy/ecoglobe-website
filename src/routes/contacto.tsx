@@ -46,7 +46,7 @@ function ContactPage() {
     <PageContainer>
       <Box sx={{ py: { xs: 8, lg: 12 } }}>
         <SectionLabel>Hablemos</SectionLabel>
-        <Typography variant="h1" sx={{ mt: 2, maxWidth: 720, fontSize: { xs: 40, sm: 56 } }}>
+        <Typography variant="h1" sx={{ mt: 2, maxWidth: 720 }}>
           Tu proyecto de energía empieza aquí
         </Typography>
         <Typography color="text.secondary" sx={{ mt: 3, maxWidth: 640, fontSize: 18 }}>
@@ -57,7 +57,7 @@ function ContactPage() {
             mt: 6,
             display: "grid",
             gap: 4,
-            gridTemplateColumns: { lg: "0.8fr 1.2fr" }
+            gridTemplateColumns: { lg: "minmax(0, 0.8fr) minmax(0, 1.2fr)" }
           }}
         >
           <Stack spacing={2}>

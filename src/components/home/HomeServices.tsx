@@ -68,7 +68,13 @@ export function HomeServices() {
     >
       <PageContainer>
         <Box sx={{ py: { xs: 8, md: 10 } }}>
-          <Stack direction="row" justifyContent="space-between" alignItems="baseline" sx={{ mb: 4 }}>
+          <Stack
+            direction={{ xs: "column", sm: "row" }}
+            justifyContent="space-between"
+            alignItems={{ xs: "flex-start", sm: "baseline" }}
+            spacing={1.5}
+            sx={{ mb: 4 }}
+          >
             <Typography variant="h2">Nuestros servicios</Typography>
             <Typography
               component={Link}

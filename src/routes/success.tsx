@@ -27,7 +27,7 @@ function SuccessPage() {
         <Typography color="text.secondary" sx={{ mt: 2, fontSize: 18 }}>
           Gracias por contactarnos. Nos comunicaremos contigo a la brevedad.
         </Typography>
-        <Stack sx={{ mt: 4 }}>
+        <Stack sx={{ mt: 4, width: { xs: "100%", sm: "auto" } }}>
           <CtaButton to="/" tone="secondary">
             Volver al inicio
           </CtaButton>

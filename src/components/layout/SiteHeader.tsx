@@ -19,9 +19,20 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <AppBar position="static" color="inherit" elevation={0}>
+    <AppBar position="static" color="inherit" elevation={0} sx={{ overflowX: "hidden" }}>
       <TopBar />
-      <Toolbar sx={{ maxWidth: 1280, width: "100%", mx: "auto", px: 2, py: 1.5, gap: 2 }}>
+      <Toolbar
+        sx={{
+          maxWidth: 1280,
+          width: "100%",
+          mx: "auto",
+          px: 2,
+          py: 1.5,
+          gap: { xs: 1, md: 2 },
+          minHeight: { xs: 64, md: 72 },
+          boxSizing: "border-box"
+        }}
+      >
         <Brand />
         <Stack
           direction="row"
@@ -34,13 +45,13 @@ export function SiteHeader() {
             <NavItem key={item.to} to={item.to} label={item.label} />
           ))}
         </Stack>
-        <Box sx={{ display: { xs: "none", sm: "block" }, ml: { xs: "auto", md: 2 } }}>
+        <Box sx={{ display: { xs: "none", md: "block" }, flexShrink: 0 }}>
           <CtaButton to="/contacto" tone="primary">
             Cotiza gratis
           </CtaButton>
         </Box>
         <IconButton
-          sx={{ display: { md: "none" }, ml: "auto" }}
+          sx={{ display: { md: "none" }, ml: "auto", flexShrink: 0 }}
           onClick={() => setOpen((value) => !value)}
           aria-label={open ? "Cerrar menú" : "Abrir menú"}
         >
@@ -62,8 +73,8 @@ function TopBar() {
         justifyContent="space-between"
         sx={{ maxWidth: 1280, mx: "auto", px: 2, py: 1 }}
       >
-        <Typography variant="caption">
-          Energía solar en Baja California · +10 años de experiencia
+        <Typography variant="caption" noWrap sx={{ minWidth: 0, overflow: "hidden", textOverflow: "ellipsis" }}>
+          Energía solar en Baja California
         </Typography>
         <Box
           component="a"

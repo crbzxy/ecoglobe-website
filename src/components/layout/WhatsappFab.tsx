@@ -11,8 +11,8 @@ export function WhatsappFab() {
       aria-label="Escríbenos por WhatsApp"
       sx={{
         position: "fixed",
-        right: 20,
-        bottom: 20,
+        right: 16,
+        bottom: 16,
         zIndex: 1300,
         bgcolor: "accent.main",
         color: "accent.contrastText",
