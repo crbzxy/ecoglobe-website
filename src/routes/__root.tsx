@@ -11,7 +11,9 @@ import {
   type ErrorComponentProps
 } from "@tanstack/react-router";
 import { type ReactNode, useEffect, useState } from "react";
+import { GoogleAnalytics } from "../components/layout/GoogleAnalytics";
 import { SiteShell } from "../components/layout/SiteShell";
+import { getGoogleAnalyticsScripts } from "../lib/analytics";
 import { theme } from "../theme/theme";
 
 export const Route = createRootRoute({
@@ -37,16 +39,7 @@ export const Route = createRootRoute({
       },
       { rel: "icon", href: "/favicon.ico" }
     ],
-    scripts: [
-      {
-        src: "https://www.googletagmanager.com/gtag/js?id=G-Y9F6ZS6HBK",
-        async: true
-      },
-      {
-        children:
-          "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Y9F6ZS6HBK');"
-      }
-    ]
+    scripts: getGoogleAnalyticsScripts()
   }),
   shellComponent: RootShell,
   component: RootComponent,
@@ -76,6 +69,7 @@ function RootComponent() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <SiteShell>
+          <GoogleAnalytics />
           <Outlet />
         </SiteShell>
       </ThemeProvider>
