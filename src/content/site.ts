@@ -12,8 +12,7 @@ export const siteContact = {
 export const navItems = [
   { to: "/servicios" as const, label: "Servicios" },
   { to: "/nosotros" as const, label: "Nosotros" },
-  { to: "/preguntas-frecuentes" as const, label: "Preguntas frecuentes" },
-  { to: "/contacto" as const, label: "Contacto" }
+  { to: "/preguntas-frecuentes" as const, label: "Preguntas frecuentes" }
 ];
 
 export const socialItems = [
