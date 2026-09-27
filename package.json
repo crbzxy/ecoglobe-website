@@ -1,58 +1,37 @@
 {
   "name": "ecoglobe-front",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "homepage": "https://www.ecoglobe.mx/",
   "private": true,
+  "type": "module",
+  "sideEffects": false,
   "engines": {
     "node": ">=20.0.0"
   },
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
   "dependencies": {
-    "@testing-library/jest-dom": "5.11.9",
-    "@testing-library/react": "11.2.5",
-    "@testing-library/user-event": "12.8.3",
-    "aos": "2.3.4",
-    "axios": "0.21.1",
-    "bootstrap": "5.1.3",
-    "react": "^18.3.1",
-    "react-bootstrap": "2.2.2",
-    "react-dom": "^18.3.1",
-    "react-external-link": "2.5.0",
-    "react-icons": "4.2.0",
-    "react-iframe": "1.8.0",
-    "react-lazy-load-image-component": "1.6.3",
-    "react-router-dom": "^6.30.3",
-    "react-scripts": "5.0.1",
-    "react-whatsapp-widget": "2.2.0",
-    "web-vitals": "1.1.1"
+    "@emotion/cache": "^11.14.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^6.4.7",
+    "@mui/material": "^6.4.7",
+    "@tanstack/react-router": "^1.168.0",
+    "@tanstack/react-start": "^1.168.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-react-swc": "^3.8.0",
-    "sass": "^1.98.0",
-    "simple-icons": "^16.15.0",
-    "vite": "^6.0.0"
-  },
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "test": "echo \"Tests pendientes de migrar a Vitest/Jest\" && exit 0"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "@netlify/vite-plugin-tanstack-start": "^1.3.19",
+    "@types/node": "^22.16.5",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^6.0.1",
+    "nitro": "3.0.260603-beta",
+    "typescript": "^5.8.3",
+    "vite": "^8.1.5"
   }
 }
