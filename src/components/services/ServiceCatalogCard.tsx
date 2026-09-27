@@ -18,7 +18,7 @@ type ServiceCatalogCardProps = {
 
 const cardSx = {
   display: "grid",
-  gridTemplateColumns: { xs: "96px minmax(0, 1fr)", sm: "120px minmax(0, 1fr)" },
+  gridTemplateColumns: { xs: "minmax(0, 1fr)", sm: "120px minmax(0, 1fr)" },
   alignItems: "center",
   overflow: "hidden",
   textDecoration: "none",
@@ -56,7 +56,7 @@ export function ServiceCatalogCard({ number, title, description, image, to }: Se
           />
         </Box>
       </Box>
-      <Stack sx={{ pr: 3, py: 3, minWidth: 0, gap: 1 }}>
+      <Stack sx={{ px: { xs: 2, sm: 0 }, pr: { sm: 3 }, pb: 3, pt: { xs: 0, sm: 3 }, minWidth: 0, gap: 1 }}>
         <Typography variant="caption" color="primary.main" fontWeight={700}>
           {number}
         </Typography>

@@ -18,7 +18,7 @@ export function Brand({ footer = false }: BrandProps) {
         component="img"
         src={footer ? images.logoFooter : images.logo}
         alt="EcoGlobe"
-        sx={{ height: 44, width: "auto" }}
+        sx={{ height: { xs: 36, md: 44 }, width: "auto", maxWidth: { xs: 160, md: "none" } }}
       />
     </Box>
   );

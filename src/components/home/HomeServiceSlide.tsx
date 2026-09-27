@@ -32,17 +32,17 @@ export function HomeServiceSlide({ number, title, description, to, image }: Home
           placeItems: "center",
           bgcolor: "secondary.main",
           p: 3,
-          minHeight: { xs: 240, md: 360 }
+          minHeight: { xs: 180, md: 360 }
         }}
       >
         <Box
           component="img"
           src={image}
           alt=""
-          sx={{ display: "block", width: "100%", maxHeight: { xs: 220, md: 320 }, objectFit: "contain" }}
+          sx={{ display: "block", width: "100%", maxHeight: { xs: 160, md: 320 }, objectFit: "contain" }}
         />
       </Box>
-      <Stack justifyContent="center" sx={{ px: { xs: 3, md: 5 }, py: { xs: 3, md: 5 }, gap: 1.5, minWidth: 0 }}>
+      <Stack justifyContent="center" sx={{ px: { xs: 2, md: 5 }, py: { xs: 2.5, md: 5 }, gap: 1.5, minWidth: 0 }}>
         <Typography variant="caption" color="primary.main" fontWeight={700}>
           {number}
         </Typography>

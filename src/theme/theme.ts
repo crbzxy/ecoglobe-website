@@ -73,9 +73,21 @@ export const theme = createTheme({
       lineHeight: 1.2,
       overflowWrap: "break-word"
     },
-    h3: { fontFamily: fontDisplay, fontWeight: 700, overflowWrap: "break-word" },
+    h3: {
+      fontFamily: fontDisplay,
+      fontWeight: 700,
+      overflowWrap: "break-word",
+      fontSize: "clamp(1.25rem, 3vw, 2rem)",
+      lineHeight: 1.2
+    },
     h4: { fontFamily: fontDisplay, fontWeight: 700, overflowWrap: "break-word" },
-    h5: { fontFamily: fontDisplay, fontWeight: 600 },
+    h5: {
+      fontFamily: fontDisplay,
+      fontWeight: 600,
+      overflowWrap: "break-word",
+      fontSize: "clamp(1.05rem, 2.4vw, 1.35rem)",
+      lineHeight: 1.3
+    },
     h6: { fontFamily: fontDisplay, fontWeight: 600 },
     button: { fontFamily: fontBody, fontWeight: 700, textTransform: "none" }
   },
@@ -86,11 +98,19 @@ export const theme = createTheme({
     MuiButton: {
       defaultProps: { disableElevation: true },
       styleOverrides: {
-        root: {
+        root: ({ theme }) => ({
           borderRadius: 999,
           paddingInline: 22,
-          paddingBlock: 10
-        }
+          paddingBlock: 10,
+          [theme.breakpoints.down("md")]: {
+            width: "100%",
+            maxWidth: "100%",
+            display: "flex",
+            alignSelf: "stretch",
+            flexBasis: "100%",
+            boxSizing: "border-box"
+          }
+        })
       }
     },
     MuiCssBaseline: {

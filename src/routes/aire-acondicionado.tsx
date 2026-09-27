@@ -64,7 +64,7 @@ function AirPage() {
                 Disfruta aire acondicionado sin preocuparte por el aumento en tu recibo. Diseñamos
                 una instalación estética, segura y con capacidad para ambos sistemas.
               </Typography>
-              <Box sx={{ mt: 3.5 }}>
+              <Box sx={{ mt: 3.5, width: { xs: "100%", sm: "auto" } }}>
                 <CtaButton to="/contacto" tone="light">
                   Cotizar paquete
                 </CtaButton>

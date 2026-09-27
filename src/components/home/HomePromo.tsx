@@ -38,7 +38,7 @@ export function HomePromo() {
               }}
             />
           </Box>
-          <Box sx={{ p: { xs: 2, sm: 6 }, minWidth: 0 }}>
+          <Box sx={{ p: { xs: 2, md: 6 }, minWidth: 0 }}>
             <SectionLabel inverted>Promoción de verano</SectionLabel>
             <Typography variant="h2" sx={{ mt: 1.5 }}>
               Paneles solares + aire acondicionado
@@ -46,7 +46,12 @@ export function HomePromo() {
             <Typography sx={{ mt: 2, maxWidth: 400, opacity: 0.75 }}>
               Cámbiate a energía solar y disfruta el confort sin preocuparte por el gasto de luz.
             </Typography>
-            <Stack direction="row" flexWrap="wrap" gap={1.5} sx={{ mt: 3.5 }}>
+            <Stack
+              direction={{ xs: "column", sm: "row" }}
+              flexWrap="wrap"
+              gap={1.5}
+              sx={{ mt: 3.5, width: { xs: "100%", sm: "auto" } }}
+            >
               <CtaButton to="/panel-mas-aire" tone="light">
                 Conoce la promoción
               </CtaButton>

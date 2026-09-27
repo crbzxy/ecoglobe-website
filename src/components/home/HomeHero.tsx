@@ -28,11 +28,16 @@ export function HomeHero() {
               trabajando para ti
             </Box>
           </Typography>
-          <Typography color="text.secondary" sx={{ mt: 3, maxWidth: 480, fontSize: 18 }}>
+          <Typography color="text.secondary" sx={{ mt: 3, maxWidth: 480, fontSize: { xs: 16, md: 18 } }}>
             Deja de preocuparte por tu gasto de luz. Diseñamos e instalamos soluciones solares
             personalizadas con la mejor relación calidad-precio.
           </Typography>
-          <Stack direction="row" flexWrap="wrap" gap={1.5} sx={{ mt: 4 }}>
+          <Stack
+            direction={{ xs: "column", sm: "row" }}
+            flexWrap="wrap"
+            gap={1.5}
+            sx={{ mt: 4, width: { xs: "100%", sm: "auto" } }}
+          >
             <CtaButton to="/contacto">Cotiza tu proyecto</CtaButton>
             <CtaButton to="/servicios" tone="secondary">
               Ver servicios
@@ -56,7 +61,7 @@ function HomeStats() {
         borderColor: "divider",
         display: "grid",
         gap: 3,
-        gridTemplateColumns: { xs: "1fr 1fr", sm: "repeat(4, 1fr)" }
+        gridTemplateColumns: { xs: "minmax(0, 1fr) minmax(0, 1fr)", md: "repeat(4, minmax(0, 1fr))" }
       }}
     >
       {homeStats.map((stat) => (

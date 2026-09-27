@@ -32,7 +32,7 @@ export function HomeBenefits() {
               sx={{
                 mt: 4,
                 display: "grid",
-                gridTemplateColumns: { sm: "1fr 1fr" },
+                gridTemplateColumns: { sm: "minmax(0, 1fr) minmax(0, 1fr)" },
                 gap: "1px",
                 bgcolor: "primary.light",
                 borderRadius: 4,
